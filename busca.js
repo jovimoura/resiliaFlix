@@ -3,10 +3,12 @@ var input = document.getElementById('pegaFilme')
 var button = document.getElementById('enviar')
 var descricao = document.getElementById('areaDeDescricao')
 
+ 
 
 console.log(descricao)
 console.log(button)
 console.log(input)
+
 
 // Função que busca as informações do filme
 
@@ -19,8 +21,11 @@ pedido.open('GET', `https://www.omdbapi.com/?apikey=d6dd773e&t=${filmeAlterado}`
 pedido.onload = function() {
         var resposta = pedido.responseText
         var respostaJson = JSON.parse(resposta)
-        var filme = new Filme(respostaJson.Title, respostaJson.Poster)
-        console.log(filme)
+
+        
+        var filme = new motorDeBusca(respostaJson.Title, respostaJson.Poster)
+        filme.excluiDadosDom(descricao)
+        filme.inserirDadosDom(descricao)
         
 
 
@@ -33,7 +38,7 @@ pedido.send()
 }
 // clase que cria um objeto do filme
 
-class Filme {
+class motorDeBusca {
 
     constructor(nome, imagem) {
         this._imagemFilme = imagem;
@@ -42,12 +47,49 @@ class Filme {
         
     }
 
+    inserirDadosDom(element) {
+
+
+        var img = document.createElement('img')
+        img.src = this._imagemFilme
+        img.id = 'conteudoImagem'
+
+
+        var title = document.createElement('h2')
+        title.textContent = this._tituloFilme
+        title.id = 'conteudoTitulo'
+
+        element.appendChild(img)
+        element.appendChild(title)
+
+
+    }
+
+    excluiDadosDom(element) {
+        var existeImagem = document.getElementById('conteudoImagem')
+        var existeTitulo = document.getElementById('conteudoTitulo')
+
+        if(existeTitulo != undefined || existeImagem) {
+            element.removeChild(existeTitulo)
+            element.removeChild(existeImagem)
+        }
+    }
+
+   
    
 
 
+   
+
 }
 
-buscaApi('Ghost')
+
+
+button.addEventListener('click' , () => {
+
+    buscaApi(input.value)
+
+})
 
 
 
