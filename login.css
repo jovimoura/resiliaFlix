@@ -1,0 +1,48 @@
+body{
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+    grid-template-columns: auto;
+    grid-template-rows: 60px auto auto 40px;
+}
+
+header{
+    background-color: grey;
+}
+
+.signInOr{
+    margin: 16px 0;
+    padding: 0 12px;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.signInOr::before{
+    background-color: rgba(0,0,0,0.35);
+    content: '';
+    height: 1px;
+    width: 50%;
+}
+
+.signInOrSpan{
+    font-size: 1.4rem;
+    line-height: 1.42857;
+    font-weight: 400;
+    color: rgba(0,0,0,0.6);
+    padding: 0 16px;
+}
+
+.signInOr::after{
+    background-color: rgba(0,0,0,0.35);
+    content: '';
+    height: 1px;
+    width: 50%;
+}
+
+footer{
+    grid-area: footer;
+}
