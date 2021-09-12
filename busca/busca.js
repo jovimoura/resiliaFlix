@@ -15,7 +15,7 @@ console.log(input)
 
 // Função que busca as informações do filme
 
-function buscaApi(filme) {
+function buscaApi(filme, element) {
 
 var pedido = new XMLHttpRequest()
 var filmeAlterado = filme
@@ -34,8 +34,8 @@ try {
                     respostaJson.Title, 
                     respostaJson.Poster
                     )
-                filme.excluiDadosDom(descricao)
-                filme.inserirDadosDom(descricao)
+                filme.excluiDadosDom(element)
+                filme.inserirDadosDom(element)
                 
                 }
                 else if(window.location.href.split('/').includes('home.html')) {
@@ -43,7 +43,7 @@ try {
                         respostaJson.Title, 
                         respostaJson.Poster
                         )
-                    filme.inserirDadosDom(populares)
+                    filme.inserirDadosDom(element)
                 }
             }
             else{
@@ -52,8 +52,8 @@ try {
                     respostaJson.Title, 
                     respostaJson.Poster
                     )
-                filme.excluiDadosDom(descricao)    
-                filme.filmeNãoEncontrado(descricao)
+                filme.excluiDadosDom(element)    
+                filme.filmeNãoEncontrado(element)
 
 
             }
@@ -120,15 +120,19 @@ class motorDeBusca {
     filmeNãoEncontrado(element) {
 
         var mensagem = document.createElement('h2')
-        mensagem.id = 'conteudoTitulo'
+        mensagem.class = 'conteudoTitulo'
         mensagem.textContent = 'FILME NÃO ENCONTRADO'
+
+        var content = document.createElement('section')
+        content.className = 'content'
 
         // var img = document.createElement('img')
         // img.src = this._imagemFilme === 'N/A' || this._imagemFilme === undefined ? 'notFound.jpg' : this._imagemFilme
         // img.id = 'conteudoImagem'
 
         // element.appendChild(img)
-        element.appendChild(mensagem)
+        element.appendChild(content)
+        content.appendChild(mensagem)
 
     }
 
@@ -147,7 +151,7 @@ if(window.location.href.split('/').includes('busca.html')) {
 
     button.addEventListener('click' , () => {
 
-        buscaApi(input.value)
+        buscaApi(input.value, descricao)
 
     })
 
@@ -161,10 +165,10 @@ if(window.location.href.split('/').includes('home.html')) {
 
     try{
 
-    buscaApi('ghost')
-    buscaApi('cidade de deus')
-    buscaApi('dilma')
-    buscaApi('se eu fosse você')
+    buscaApi('ghost', populares)
+    buscaApi('cidade de deus', populares)
+    buscaApi('dilma', populares)
+    buscaApi('se eu fosse você', populares)
 
     } catch(err) {
 
