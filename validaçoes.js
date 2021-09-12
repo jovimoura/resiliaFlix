@@ -1,3 +1,5 @@
+let senha = document.getElementById('senha');
+
 function limpa_formulário_cep() {
     //Limpa valores do formulário de cep.
     document.getElementById('rua').value=("");
@@ -65,7 +67,7 @@ function consultaCEP(valor) {
 }
 
 function validateEmail(email) {
-    var re = /\S+@\S+\.\S+/;
+    let re = /\S+@\S+\.\S+/;
     
     if (email != ''){
         if (re.test(email) == false){
@@ -75,9 +77,8 @@ function validateEmail(email) {
 }
 
 function validateSenha(confirmSenha) {
-
     let senha = document.getElementById('senha');
-    
+
     if(confirmSenha != senha.value){
         alert("A senha inserida é diferente da anterior");
     }    
@@ -85,8 +86,24 @@ function validateSenha(confirmSenha) {
 
 function validateRG(rg){
     
-    if(rg.length < 11){
-        alert("Informe um RG válido")
+    if(rg != ''){
+        if(rg.length < 11){
+            alert("Informe um RG válido");
+        }
+    }
+}
+
+function mostrarSenha(){
+    let inputSenha = document.getElementById('senha');
+    let littleEye = document.getElementById('little-eye');
+
+    if (inputSenha.getAttribute('type') == 'password') {
+        inputSenha.setAttribute('type', 'text')
+        littleEye.setAttribute('class', 'fas fa-eye-slash')
+    } 
+    else {
+        inputSenha.setAttribute('type', 'password')
+        littleEye.setAttribute('class', 'fas fa-eye')        
     }
 }
 
