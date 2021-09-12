@@ -89,10 +89,25 @@ i{
     background-color:#440069;
 }
 
+.btn-primary:focus{
+    background-color: #560382;
+    border-color: #560382;
+    border-radius: .25rem;
+    box-shadow: 0 0 0 0.1rem #560382;
+    transition: 0.3s ease-in-out;
+}
+
 .box-forgot{
     display: flex;
     width: 100%;
     justify-content: flex-end;
+}
+
+.box-login, #changePassword{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    line-height: 2em;
 }
 
 a{
