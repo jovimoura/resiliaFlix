@@ -1,9 +1,11 @@
 let inputEmail = document.getElementById('inputEmail')
 let error = document.getElementById('errorEmail')
-let btnPassword = document.getElementById('btnPassword')
 let inputPassword = document.getElementById('inputPassword')
 let btnResetPassword = document.getElementById('btnResetPassword')
 let changePassword = document.getElementById('changePassword')
+
+
+let btnPassword = document.getElementById('btnPassword')
 
 inputEmail.addEventListener('blur', function () {
     let re = /\S+@\S+\.\S+/
@@ -30,10 +32,10 @@ if (btnPassword) {
 
         if (inputPassword.getAttribute('type') == 'password') {
             inputPassword.setAttribute('type', 'text')
-            btnPassword.innerHTML = 'Ocultar'
+            btnPassword.setAttribute('class', 'fas fa-eye-slash')
         } else {
             inputPassword.setAttribute('type', 'password')
-            btnPassword.innerHTML = 'Exibir'
+            btnPassword.setAttribute('class', 'fas fa-eye')
         }
 
     })

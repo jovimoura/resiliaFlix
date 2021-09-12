@@ -6,13 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <!--CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+
     <!--JS-->
     <script src="https://kit.fontawesome.com/a3e340081b.js" crossorigin="anonymous"></script>
     <script src="login.js" defer></script>
-
 </head>
 
 <body>
@@ -20,36 +25,72 @@
 
     </header>
     <main>
-        <form>
+        <div class="container">
+            <form>
 
-            <h2>Faça seu login</h2>
-            <div class="inputContainer">
-                <i class="fas fa-envelope"></i>
-                <input id="inputEmail" type="email" name="email" placeholder="Digite seu e-mail" required>
+                <h2>Login</h2>
+
+                <label>E-mail</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <input id="inputEmail" type="email" name="email" placeholder="Digite seu e-mail"
+                        class="form-control" required>
+                </div>
                 <span id="errorEmail"></span>
-            </div>
 
-            <div class="inputContainer">
-                <i class="fas fa-key"></i>
-                <input id="inputPassword" type="password" name="password" placeholder="Digite sua senha">
-                <button id="btnPassword">Exibir</button>
-            </div>
+                <label>Senha</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fas fa-key"></i>
+                    </span>
 
-            <a href="forgot-password.html">Esqueceu a senha?</a>
+                    <input id="inputPassword" type="password" name="password" placeholder="Digite sua senha"
+                        class="form-control" required>
+                    <span class="input-group-text" id="basic-addon1-bg">
+                        <i class="fas fa-eye" id="btnPassword"></i>
+                    </span>
+                </div>
 
-            <button>Entrar</button>
+                <div class="box-forgot">
+                    <a href="forgot-password.html">Esqueceu a senha?</a>
+                </div>
 
-            <div class="signInOr">
-                <span class="signInOrSpan">ou</span>
-            </div>
+                <button class="btn btn-primary">Entrar</button>
 
-            <!--PFV API DA GOOGLE RODA AÍ PARCEIRA-->
+                <div class="box-sign-up">
+                    Novo no X? <a href="#">Cadastre-se</a>
+                </div>
 
-        </form>
+                <div class="signInOr">
+                    <span class="signInOrSpan">ou</span>
+                </div>
 
-        <div>
-            Novo no X? <a href="#">Cadastre-se</a>
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="basic-addon1-bg">
+                        <img src="icon-google.png">
+                    </span>
+                    <p class="form-control">Login com o Google</p>
+                </div>
+
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="basic-addon1-bg">
+                        <img src="icon-facebook.png">
+                    </span>
+                    <p class="form-control">Login com o Facebook</p>
+                </div>
+
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="basic-addon1-bg">
+                        <img src="icon-linkedin.png">
+                    </span>
+                    <p class="form-control">Login com o Linkedin</p>
+                </div>
+
+            </form>
         </div>
+
     </main>
     <footer>
 
