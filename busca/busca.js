@@ -23,6 +23,7 @@ try {
             var resposta = pedido.responseText
             var respostaJson = JSON.parse(resposta)
 
+            if(respostaJson.Response != 'False') {
             
             var filme = new motorDeBusca(
                 respostaJson.Title, 
@@ -31,7 +32,19 @@ try {
             filme.excluiDadosDom(descricao)
             filme.inserirDadosDom(descricao)
             
+            }
 
+            else{
+
+                var filme = new motorDeBusca(
+                    respostaJson.Title, 
+                    respostaJson.Poster
+                    )
+                filme.excluiDadosDom(descricao)    
+                filme.filmeNãoEncontrado(descricao)
+
+
+            }
 
             
     }
@@ -63,7 +76,7 @@ class motorDeBusca {
 
 
         var title = document.createElement('h2')
-        title.textContent = this._imagemFilme === undefined ? "FILME NÃO ENCONTRADO " : this._tituloFilme
+        title.textContent = this._tituloFilme
         title.id = 'conteudoTitulo'
 
         element.appendChild(img)
@@ -76,10 +89,27 @@ class motorDeBusca {
         var existeImagem = document.getElementById('conteudoImagem')
         var existeTitulo = document.getElementById('conteudoTitulo')
 
-        if(existeTitulo != undefined || existeImagem) {
+        if(existeTitulo != undefined) {
             element.removeChild(existeTitulo)
+        }
+        if( existeImagem != undefined) {
             element.removeChild(existeImagem)
         }
+    }
+
+    filmeNãoEncontrado(element) {
+
+        var mensagem = document.createElement('h2')
+        mensagem.id = 'conteudoTitulo'
+        mensagem.textContent = 'FILME NÃO ENCONTRADO'
+
+        // var img = document.createElement('img')
+        // img.src = this._imagemFilme === 'N/A' || this._imagemFilme === undefined ? 'notFound.jpg' : this._imagemFilme
+        // img.id = 'conteudoImagem'
+
+        // element.appendChild(img)
+        element.appendChild(mensagem)
+
     }
 
    
