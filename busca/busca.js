@@ -91,22 +91,38 @@ class motorDeBusca {
         title.textContent = this._tituloFilme
         title.id = 'conteudoTitulo'
 
-        element.appendChild(img)
-        element.appendChild(title)
+        var content = document.createElement('section')
+        content.className = 'content'
+
+        element.appendChild(content)
+
+        content.appendChild(img)
+        content.appendChild(title)
 
 
     }
 
     excluiDadosDom(element) {
-        var existeImagem = document.getElementById('conteudoImagem')
-        var existeTitulo = document.getElementById('conteudoTitulo')
+        // var existeImagem = document.getElementById('conteudoImagem')
+        // var existeTitulo = document.getElementById('conteudoTitulo')
 
-        if(existeTitulo != undefined) {
-            element.removeChild(existeTitulo)
+        // if(existeTitulo != undefined) {
+        //     element.removeChild(existeTitulo)
+        // }
+        // if( existeImagem != undefined) {
+        //     element.removeChild(existeImagem)
+        // }
+
+        var content =  document.querySelector('.content')
+
+        console.log(content)
+
+        if(content != null) {
+
+        element.removeChild(content)
+
         }
-        if( existeImagem != undefined) {
-            element.removeChild(existeImagem)
-        }
+
     }
 
     filmeNãoEncontrado(element) {
