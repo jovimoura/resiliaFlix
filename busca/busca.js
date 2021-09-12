@@ -12,7 +12,7 @@ console.log(input)
 
 // Função que busca as informações do filme
 
-function buscaApi(filme) {
+export function buscaApi(filme) {
 
 var pedido = new XMLHttpRequest()
 var filmeAlterado = filme

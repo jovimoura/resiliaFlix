@@ -1,5 +1,5 @@
 //Guardiões da Galáxia Vol.2
-const url = 'http://www.omdbapi.com/?i=tt3896198&apikey=9c0c403e'
+/*const url = 'http://www.omdbapi.com/?i=tt3896198&apikey=9c0c403e'
 const xhr = new XMLHttpRequest();
 xhr.open('GET',url);
 xhr.addEventListener('load',()=>{
@@ -17,4 +17,9 @@ xhr.addEventListener('load',()=>{
     const texto = document.getElementById('texto');
     texto.textContent = plot;
 });
-xhr.send();
+xhr.send();*/
+
+
+import { buscaApi } from "../busca/busca";
+
+// criar arrays com nomes de filmes e usar os arrays para os carrosseis
