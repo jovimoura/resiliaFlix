@@ -2,8 +2,10 @@
 var input = document.getElementById('pegaFilme')
 var button = document.getElementById('enviar')
 var descricao = document.getElementById('areaDeDescricao')
+var populares = document.getElementById('carrossel__populares')
 
-console.log(window.location.href)
+console.log(window.location.href.split('/').includes('home.html'))   
+console.log(populares)
  
 
 console.log(descricao)
@@ -26,7 +28,7 @@ try {
 
             if(respostaJson.Response != 'False') {
 
-               
+               if(window.location.href.split('/').includes('busca.html')) {
             
                 var filme = new motorDeBusca(
                     respostaJson.Title, 
@@ -36,7 +38,14 @@ try {
                 filme.inserirDadosDom(descricao)
                 
                 }
-
+                else if(window.location.href.split('/').includes('home.html')) {
+                    var filme = new motorDeBusca(
+                        respostaJson.Title, 
+                        respostaJson.Poster
+                        )
+                    filme.inserirDadosDom(populares)
+                }
+            }
             else{
 
                 var filme = new motorDeBusca(
@@ -124,14 +133,33 @@ class motorDeBusca {
 }
 
 
+if(window.location.href.split('/').includes('busca.html')) {
 
-button.addEventListener('click' , () => {
+    try{
 
-    buscaApi(input.value)
+    button.addEventListener('click' , () => {
 
-})
+        buscaApi(input.value)
 
+    })
 
+    } catch(err) {
+        
+    }
 
+}
 
+if(window.location.href.split('/').includes('home.html')) {
+
+    try{
+
+    buscaApi('ghost')
+    buscaApi('cidade de deus')
+    buscaApi('dilma')
+    buscaApi('se eu fosse você')
+
+    } catch(err) {
+
+    }
+}
 
