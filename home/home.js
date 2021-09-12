@@ -18,3 +18,6 @@ xhr.addEventListener('load',()=>{
     texto.textContent = plot;
 });
 xhr.send();
+
+
+
