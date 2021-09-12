@@ -84,12 +84,12 @@ class motorDeBusca {
 
         var img = document.createElement('img')
         img.src = this._imagemFilme === 'N/A' || this._imagemFilme === undefined ? 'notFound.jpg' : this._imagemFilme
-        img.id = 'conteudoImagem'
+        img.className = 'conteudoImagem'
 
 
         var title = document.createElement('h2')
         title.textContent = this._tituloFilme
-        title.id = 'conteudoTitulo'
+        title.className = 'conteudoTitulo'
 
         var content = document.createElement('section')
         content.className = 'content'
@@ -103,15 +103,7 @@ class motorDeBusca {
     }
 
     excluiDadosDom(element) {
-        // var existeImagem = document.getElementById('conteudoImagem')
-        // var existeTitulo = document.getElementById('conteudoTitulo')
-
-        // if(existeTitulo != undefined) {
-        //     element.removeChild(existeTitulo)
-        // }
-        // if( existeImagem != undefined) {
-        //     element.removeChild(existeImagem)
-        // }
+      
 
         var content =  document.querySelector('.content')
 
