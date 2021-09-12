@@ -1,0 +1,28 @@
+#busca_filme {
+    background:cyan;
+}
+
+#home_carrossel {
+    background: pink;
+    height: 100vh;
+}
+
+#carrossel__banner {
+    background: purple;
+}
+
+#carrossel__populares {
+    background: darkblue;
+}
+
+#carrossel__alta {
+    background: darkred;
+}
+
+#carrossel__top10 {
+    background: green;
+}
+
+#carrossel__lancamentos {
+    background: violet;
+}
