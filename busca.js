@@ -17,23 +17,30 @@ function buscaApi(filme) {
 var pedido = new XMLHttpRequest()
 var filmeAlterado = filme
 filmeAlterado = filmeAlterado.replace(' ', '+')
-pedido.open('GET', `https://www.omdbapi.com/?apikey=d6dd773e&t=${filmeAlterado}`)
-pedido.onload = function() {
-        var resposta = pedido.responseText
-        var respostaJson = JSON.parse(resposta)
+try {
+    pedido.open('GET', `https://www.omdbapi.com/?apikey=d6dd773e&t=${filmeAlterado}`)
+    pedido.onload = function() {
+            var resposta = pedido.responseText
+            var respostaJson = JSON.parse(resposta)
 
-        
-        var filme = new motorDeBusca(respostaJson.Title, respostaJson.Poster)
-        filme.excluiDadosDom(descricao)
-        filme.inserirDadosDom(descricao)
-        
+            
+            var filme = new motorDeBusca(
+                respostaJson.Title, 
+                respostaJson.Poster
+                )
+            filme.excluiDadosDom(descricao)
+            filme.inserirDadosDom(descricao)
+            
 
 
-        
+            
+    }
+
+    pedido.send()
 }
-
-pedido.send()
-
+catch(err) {
+    console.log(err)
+}
 
 }
 // clase que cria um objeto do filme
@@ -51,12 +58,12 @@ class motorDeBusca {
 
 
         var img = document.createElement('img')
-        img.src = this._imagemFilme
+        img.src = this._imagemFilme === 'N/A' || this._imagemFilme === undefined ? 'notFound.jpg' : this._imagemFilme
         img.id = 'conteudoImagem'
 
 
         var title = document.createElement('h2')
-        title.textContent = this._tituloFilme
+        title.textContent = this._imagemFilme === undefined ? "FILME NÃO ENCONTRADO " : this._tituloFilme
         title.id = 'conteudoTitulo'
 
         element.appendChild(img)
