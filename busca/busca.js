@@ -3,6 +3,7 @@ var input = document.getElementById('pegaFilme')
 var button = document.getElementById('enviar')
 var descricao = document.getElementById('areaDeDescricao')
 
+console.log(window.location.href)
  
 
 console.log(descricao)
@@ -24,15 +25,17 @@ try {
             var respostaJson = JSON.parse(resposta)
 
             if(respostaJson.Response != 'False') {
+
+               
             
-            var filme = new motorDeBusca(
-                respostaJson.Title, 
-                respostaJson.Poster
-                )
-            filme.excluiDadosDom(descricao)
-            filme.inserirDadosDom(descricao)
-            
-            }
+                var filme = new motorDeBusca(
+                    respostaJson.Title, 
+                    respostaJson.Poster
+                    )
+                filme.excluiDadosDom(descricao)
+                filme.inserirDadosDom(descricao)
+                
+                }
 
             else{
 
