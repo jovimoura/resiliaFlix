@@ -12,10 +12,10 @@ inputEmail.addEventListener('blur', function () {
 
     if (inputEmail != '') {
         if (re.test(inputEmail.value) == false) {
-            error.innerHTML = 'E-mail incorreto'
+            error.setAttribute('class', 'fas fa-times')
         }
         else {
-            error.innerHTML = 'E-mail válido'
+            error.setAttribute('class', 'fas fa-check')
         }
     }
 })
