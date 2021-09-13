@@ -132,3 +132,11 @@ button.addEventListener('click' , () => {
 
 
 
+                        //CARROSSEL DE FILMES
+
+//array de filmes
+let arrayTerror = ["Hereditary","Insidious","Us","Run","The Blair Witch Project"];
+let arrayAcao = ["The Suicide Squad","Iron Man","Black Panther","Aquaman","Avengers: Infinity War","Man of Steel"];
+let arrayRomance = ["Your Name","Pride and Prejudice","About Time","Her","One Day"];
+let arrayDrama = ["Collateral Beauty","Whiplash","Moonlight","Knives Out","The Boy in the Striped Pyjamas"];
+let arraySeries = ["Naruto","The Witcher","La casa de papel","Game of Thrones","Bridgerton"];
