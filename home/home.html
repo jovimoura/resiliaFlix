@@ -28,6 +28,9 @@
                 <a class="menu__link ativo" href="./home.html" id="menu__item"><i class="fas fa-home"></i>Início</a>
                 <input id="txtBusca" type="text" placeholder="Buscar filme..." style="color: #333; font-style: italic;">
                 <img src="./search-13-16.png" alt="Buscar" id="imgBusca">
+                <a class="menu__link" href="./minhaLista.html" id="menu__item">Minha lista</a>
+                <a class="menu__link" href="./filmes.html" id="menu__item">Filmes</a>
+                <a class="menu__link" href="./series.html" id="menu__item">Séries</a>
             </div>
         </nav>
     </header>
@@ -35,7 +38,8 @@
         <div class="carrosel">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                      class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
                         aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
@@ -82,6 +86,17 @@
                 </button>
             </div>
         </section>
+
+        <div class="categorias">
+          <ul class="categorias__lista">
+            <li class="categorias__item">ACÃO</li>
+            <li class="categorias__item">ROMANCE</li>
+            <li class="categorias__item">TERROR</li>
+            <li class="categorias__item">DRAMA</li>
+            <li class="categorias__item">SERIES</li>
+          </ul>
+        </div>
+
 
         <div id="carrossel__populares">
             <h2></h2>

@@ -7,8 +7,6 @@
     'conteudo'
     'rodape';
     grid-template-columns: auto;
-
-
     grid-template-rows: 50px auto auto auto;
 
 }
@@ -20,8 +18,6 @@
 
 .conteudo {
     grid-area: conteudo;
-
-
     padding: 0 2rem;   
 }
 
@@ -36,8 +32,13 @@
     border-radius: 25px;
 }
 
+#carouselExampleIndicators {
+    border: 2px solid transparent;
+    transition: 0.22s ease-in-out;
+}
+
 #carouselExampleIndicators:hover{
-    border: 2px solid #dcdcdc;
+    border: 2px solid #fdfdfd;
 }
 
 .carousel-inner .carousel-item img{
@@ -130,6 +131,50 @@ Carrossel com filme 4x4
 
 img {
     grid-row: 1 / 4;
-
     grid-column: 1 / 4;
+}
+
+
+.categorias__lista {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 0 2rem; 
+}
+
+.categorias__item {
+    border: 2px solid transparent;
+    border-radius: 25px;
+    padding: 2rem;
+    width: 18%;
+    height: 20%;
+    text-align: center;
+    transition: .32s ease-in-out;
+}
+
+.categorias__item:hover {
+    border: 2px solid white;
+}
+
+.categorias__item:nth-child(1):hover {
+    background: url('./background-win.gif') center / cover;
+}
+
+.categorias__item:nth-child(2):hover {
+    background: url('./romance.gif') center / cover;
+}
+
+.categorias__item:nth-child(3):hover {
+    background: url('./terror.gif') center / cover;
+}
+
+.categorias__item:nth-child(4):hover {
+    background: url('./drama.webp') center / cover;
+}
+
+.categorias__item:nth-child(5):hover {
+    background: url('./laCasaDePapel.gif') center / cover;
 }
