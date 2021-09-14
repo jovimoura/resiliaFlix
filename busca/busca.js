@@ -5,14 +5,14 @@ var descricao = document.getElementById('areaDeDescricao')
 
  
 
-console.log(descricao)
-console.log(button)
-console.log(input)
+//console.log(descricao)
+//console.log(button)
+//console.log(input)
 
 
 // Função que busca as informações do filme
 
-export function buscaApi(filme) {
+function buscaApi(filme) {
 
 var pedido = new XMLHttpRequest()
 var filmeAlterado = filme
@@ -45,6 +45,8 @@ try {
 
 
             }
+            
+            
 
             
     }
@@ -122,11 +124,11 @@ class motorDeBusca {
 
 
 
-button.addEventListener('click' , () => {
+/*button.addEventListener('click' , () => {
 
     buscaApi(input.value)
 
-})
+})*/
 
 
 
@@ -140,3 +142,44 @@ let arrayAcao = ["The Suicide Squad","Iron Man","Black Panther","Aquaman","Aveng
 let arrayRomance = ["Your Name","Pride and Prejudice","About Time","Her","One Day"];
 let arrayDrama = ["Collateral Beauty","Whiplash","Moonlight","Knives Out","The Boy in the Striped Pyjamas"];
 let arraySeries = ["Naruto","The Witcher","La casa de papel","Game of Thrones","Bridgerton"];
+
+function carrossel(array,id){
+    console.log('funcao funciona')
+    let divPai = document.getElementById(id);
+    console.log(divPai)
+
+    for(let i = 0; i < array.length; i++){
+        console.log('loop ligado')
+        
+        
+        try {
+            console.log('try ligado')
+            let pedidO = new XMLHttpRequest();
+            pedidO.open('GET',`https://www.omdbapi.com/?apikey=d6dd773e&t=${array[i]}`);
+            pedidO.onload = ()=>{
+                console.log('pedido funciona')
+                let resposta = pedidO.responseText;
+                let respostaJSON = JSON.parse(resposta);
+
+                let poster = respostaJSON.Poster;
+
+                let div = document.createElement('div');
+                let img = document.createElement('img');
+                let p = document.createElement('p');
+
+                img.setAttribute('src',poster);
+                p.textContent = respostaJSON.Plot;
+
+                div.append(img);
+                div.append(p);
+                divPai.append(div);
+
+            };
+        }
+        catch(err) {
+            console.log(err)
+        }
+    }
+}
+
+carrossel(arrayAcao,'carrossel__acao');
