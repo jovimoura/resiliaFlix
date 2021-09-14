@@ -1,0 +1,179 @@
+body{
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+    grid-template-columns: auto;
+    grid-template-rows: 60px auto 40px;
+    height: 100vh;
+    font-family: 'Dosis', sans-serif;
+}
+
+header{
+    grid-area: header;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 50%, rgba(233,233,233,1) 100%);
+}
+
+main{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+}
+
+h2{
+    line-height: 2em;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 2em lightgrey;
+    padding: 15px;
+}
+
+label{
+    line-height: 2em;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+.form-control:focus{
+    border-color: #560382;
+    border-radius: .25rem;
+    box-shadow: 0 0 0 0.1rem #560382;
+    transition: 0.3s ease-in-out;
+}
+
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback){
+    border-radius: .25rem;
+}
+
+.input-group-text{
+    background-color: #560382;
+}
+
+i{
+    color: white;
+}
+
+#errorEmail{
+    position: absolute;
+    top: 11px;
+    right: 10px;
+}
+
+.fa-eye-slash, .fa-eye, .fa-times, .fa-check{
+    color: black;
+}
+
+.btn-primary{
+    margin-top: 5%;
+    width: 100%;
+    background-color: #560382;
+    border-color: #560382;
+    font-weight: bolder;
+}
+
+.btn-primary:hover{
+    background-color:#440069;
+}
+
+.btn-primary:focus{
+    background-color: #560382;
+    border-color: #560382;
+    border-radius: .25rem;
+    box-shadow: 0 0 0 0.1rem #560382;
+    transition: 0.3s ease-in-out;
+}
+
+.box-forgot{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.box-login, #changePassword{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    line-height: 2em;
+}
+
+a{
+    text-decoration: none;
+    color: #560382;
+}
+
+a:hover{
+    color: #440069;
+    font-weight: bold;
+}
+
+.box-sign-up{
+    line-height: 2em;
+}
+
+.signInOr{
+    margin: 5px 0;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.signInOr::before{
+    background-color: rgba(0,0,0,0.35);
+    content: '';
+    height: 1px;
+    width: 50%;
+}
+
+.signInOrSpan{
+    font-size: 1.4rem;
+    line-height: 1.42857;
+    font-weight: 400;
+    color: rgba(0,0,0,0.6);
+    padding: 0 16px;
+}
+
+.signInOr::after{
+    background-color: rgba(0,0,0,0.35);
+    content: '';
+    height: 1px;
+    width: 50%;
+}
+
+.mb-3{
+    cursor: pointer;
+}
+
+img{
+    background-color: white;
+}
+
+#basic-addon1-bg{
+    background-color: white;
+}
+
+footer{
+    grid-area: footer;
+    background: rgb(233,233,233);
+    background: linear-gradient(0deg, rgba(233,233,233,1) 0%, rgba(235,235,235,1) 50%, rgba(255,255,255,1) 100%);
+}
+
+@media (max-width: 760px){
+    .container{
+        width: 80%;
+    }
+}
