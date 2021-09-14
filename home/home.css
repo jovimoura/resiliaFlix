@@ -1,0 +1,123 @@
+.app {
+    background-color:#000;
+    color: #dcdcdc;
+    grid-template-areas: 
+    'cabecalho'
+    'carrossel'
+    'conteudo'
+    'rodape';
+    grid-template-columns: auto;
+    grid-template-rows: 50px auto auto auto;
+}
+
+.cabecalho {
+    grid-area:cabecalho;
+    padding: 0 2rem;
+}
+
+.conteudo {
+    grid-area: conteudo;
+    padding: 0 2rem;   
+}
+
+.main-carousel{
+    grid-area: carrossel;
+}
+
+.carousel {
+    grid-column: 1/5;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+#carouselExampleIndicators:hover{
+    border: 2px solid #dcdcdc;
+}
+
+.carousel-inner .carousel-item img{
+    width: 100%;
+    height: 500px;
+    border-radius: 24px;
+}
+
+/*
+Carrossel com filme 4x4
+.carousel-inner .carousel-item img{
+    width: 24%;
+    height: auto;
+}
+
+.carousel-inner .carousel-item img:nth-child(odd){
+    margin-right: 1%;
+}
+
+.carousel-inner .carousel-item img:nth-child(even){
+    margin-right: 1%;
+}
+
+.carousel-inner .carousel-item img:last-child{
+    margin-right: 0;
+}
+
+.carrossel img {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-item img{
+    width: 100%;
+}
+*/
+
+
+.rodape {
+    background: #000;
+    color: #dcdcdc;
+    font-size: .8rem;
+    grid-area: rodape;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+.menu__lista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#menu__item {
+    color: #dcdcdc;
+    text-decoration: none;
+    margin-right: 1rem;
+
+}
+
+.menu__item::marker {
+    display: none;
+}
+  
+#txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:260px;
+}
+
+.destaques {
+    display: grid;
+    grid-gap: 0.2rem; /*Adiciona espaçamento de uma linha para outra*/
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    height: calc(100vh - 50px); /*conteudo principal - cabecalho*/
+}
+img {
+    grid-row: 1 / 4;
+    grid-column: 1 / 4;
+}
