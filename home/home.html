@@ -6,40 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ResiliaFlix</title>
+    <!--CSS-->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="home.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
-        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
-        crossorigin="anonymous"></script>
 </head>
 
-<body class="app">
-    <header class="cabecalho" id="cabecalho">
-        <nav class="menu">
-            <div class="menu__lista">
-                <a class="menu__link ativo" href="./home.html" id="menu__item"><i class="fas fa-home"></i>Início</a>
-                <input id="txtBusca" type="text" placeholder="Buscar filme..." style="color: #333; font-style: italic;">
-                <img src="./search-13-16.png" alt="Buscar" id="imgBusca">
-                <a class="menu__link" href="./minhaLista.html" id="menu__item">Minha lista</a>
-                <a class="menu__link" href="./filmes.html" id="menu__item">Filmes</a>
-                <a class="menu__link" href="./series.html" id="menu__item">Séries</a>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar navbar-dark">
+            <a class="navbar-brand" href="#">QUAL O NOME?</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Início</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cadastre-se</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
+                            class="fas fa-search"></i></button>
+                </form>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Usuário
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Giovana Rossi</a>
+                        <a class="dropdown-item" href="#">Henrique Medeiros</a>
+                        <a class="dropdown-item" href="#">João Victor Moura</a>
+                        <a class="dropdown-item" href="#">Larissa Oliveira</a>
+                        <a class="dropdown-item" href="#">Wellerson Ramos</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fas fa-plus"></i>Adicionar perfil</a>
+                    </div>
+                </li>
+
             </div>
         </nav>
     </header>
-    <main class="conteudo" id="home_principal">
-        <div class="carrosel">
+    <main id="home_principal">
+        <section class="firstSection">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
+                <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                      class="active" aria-current="true" aria-label="Slide 1"></button>
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
                         aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
@@ -50,18 +74,6 @@
                         <a href="#">
                             <img src="teste3.jpg" alt="" ...>
                         </a>
-                        <!-- Carrossel com filme 4x4
-                             <a href="#">
-                            <img src="https://m.media-amazon.com/images/M/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_SX300.jpg"
-                            alt="...">
-                        </a>
-                        <img src="https://m.media-amazon.com/images/M/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_SX300.jpg"
-                            alt="...">
-                        <img src="https://m.media-amazon.com/images/M/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_SX300.jpg"
-                            alt="...">
-                        <img src="https://m.media-amazon.com/images/M/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_SX300.jpg"
-                            alt="...">
-                        -->
                     </div>
                     <div class="carousel-item">
                         <a href="#">
@@ -85,17 +97,32 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+
+            <div>
+                <ul class="category">
+                    <li class="categoryItem">Ação</li>
+                    <li class="categoryItem">Romance</li>
+                    <li class="categoryItem">Terror</li>
+                    <li class="categoryItem">Drama</li>
+                    <li class="categoryItem">Séries</li>
+                </ul>
+            </div>
         </section>
 
-        <div class="categorias">
-          <ul class="categorias__lista">
-            <li class="categorias__item">ACÃO</li>
-            <li class="categorias__item">ROMANCE</li>
-            <li class="categorias__item">TERROR</li>
-            <li class="categorias__item">DRAMA</li>
-            <li class="categorias__item">SERIES</li>
-          </ul>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         <div id="carrossel__populares">
@@ -107,7 +134,29 @@
         <div id="carrossel__lancamentos">LANÇAMENTOS</div>
         <div id="carrossel__acao">Filmes de ação</div>
     </main>
-    <footer class="rodape">Todos os direitos reservados &copy;2021</footer>
+
+    <footer class="rodape">
+        Todos os direitos reservados &copy;2021
+    </footer>
+
+    <!--JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a3e340081b.js" crossorigin="anonymous"></script>
     <script src="home.js"></script>
 </body>
+
 </html>
