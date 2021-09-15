@@ -41,7 +41,6 @@ function carrossel(array, id) {
         console.log(array[i])
         let filme = array[i]
         filme = filme.replace(' ', '+')
-            pedidO.onload = ()=>{
 
 
         try {
@@ -50,11 +49,6 @@ function carrossel(array, id) {
             pedidO.open('GET', `https://www.omdbapi.com/?apikey=d6dd773e&t=${array[i]}`);
             console.log('linha 50')
             pedidO.onload = () => {
-
-                console.log('pedido funciona');
-                let resposta = pedidO.responseText;
-                let respostaJSON = JSON.parse(resposta);
-
                 let poster = respostaJSON.Poster;
 
                 let div = document.createElement('div');
@@ -77,3 +71,19 @@ function carrossel(array, id) {
 }
 
 carrossel(arrayAcao, 'carrossel__acao');
+
+
+
+
+
+//btn de busca, precisa descobrir se funfa :)
+let btnSearch = document.getElementById('btnSearch')
+btnSearch.addEventListener('click', function (event) {
+    event.preventDefault()
+    document.getElementById('inputSearch').style.display = 'flex'
+})
+
+let inputSearch = document.getElementById('inputSearch')
+inputSearch.addEventListener('blur', function () {
+    this.style.display = 'none'
+})
