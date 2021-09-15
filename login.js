@@ -3,8 +3,6 @@ let error = document.getElementById('errorEmail')
 let inputPassword = document.getElementById('inputPassword')
 let btnResetPassword = document.getElementById('btnResetPassword')
 let changePassword = document.getElementById('changePassword')
-
-
 let btnPassword = document.getElementById('btnPassword')
 
 inputEmail.addEventListener('blur', function () {
