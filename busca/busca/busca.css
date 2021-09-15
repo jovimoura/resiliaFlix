@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+}
+
+#sendMovie {
+    text-align: center;
+    margin: auto;
+    width: 500px;
+    margin-top: 50px;
+}
+
+#content {
+    display: grid;
+    flex-direction: column;
+}
