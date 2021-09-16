@@ -15,42 +15,63 @@ header{
     grid-area: header;
     grid-column: 1/5;
     background-color: rgb(9, 11, 19);
-    margin-bottom: 1rem;    
+    margin-bottom: 3rem;    
 }
 
-
-
-/*ESTILIZAÇÃO DO HEADER, FALTA MUITA COISA*/
-
 .navbar{
-    padding: 0 5%;
+    padding: 0 0 0 5%;
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.nav-item{
-    width: 20%;
+.navbar-brand{
+    font-size: 4rem;
+    margin: 0 4rem 0 0;
 }
 
-.nav-item a{
+.navbar-nav{
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    margin: 0 0 0 10rem;
+}
+
+.nav-item{
+    width: 25%;
+}
+
+.nav-item{
+    list-style: none;
+}
+
+#search{
+    margin-left: 15%;
+}
+
+#nav-dropdown{
+    width: 15%;
+}
+
+.nav-item:hover{
     color: #dcdcdc;
 }
 
-/*HOVER E FOCUS*/
+.dropdown-toggle{
+    color: rgba(255,255,255,.55);
+}
+
+.dropdown-toggle:hover{
+    color: #dcdcdc;
+}
+
+.dropdown-toggle:focus{
+    color: #dcdcdc;
+}
 
 .dropdown-menu a{
     color: #121212;
 }
-
-.navbar-nav{
-    width: 100%;
-}
-
-.form-inline{
-    display: flex;
-    width: 50%;
- }
 
 .dropdown-item img{
     width: 20px;
@@ -61,14 +82,6 @@ header{
 .fas{
     margin-right: 7%;
 }
-
-#inputSearch{
-    display: none;
-}
-
-
-
-
 
 .infoSection{
     grid-area: carousel;
@@ -102,7 +115,7 @@ header{
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    margin-top: 1.8rem;
+    margin: 5rem 0 8rem 0;
     padding-left: 0;
     width: 100%;
 }
@@ -120,6 +133,7 @@ header{
     text-transform: uppercase;
     font-weight: bold;
     color: #dcdcdc;
+    font-size: 1.5rem;
 }
 
 .categoryItem:hover {
@@ -149,7 +163,8 @@ header{
 
 .thumbSection {
     grid-area: movies;
-    padding: 0 0 0 2rem;
+    margin: 0 10% 0 10%;
+    width: 80%;
 }
 
 .thumbTitle {
@@ -160,6 +175,7 @@ header{
 .thumbTiles{
     background: rgb(0, 0, 0, 0.5);
     border: 2px solid #121212;
+    border-radius: 5px;
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
     margin-top: 1rem;
     padding: .5rem;
@@ -212,6 +228,14 @@ header{
     font-size: 4vw;
     font-weight: bold;
     transition: transform .1s ease-out;
+}
+
+footer{
+    grid-area: rodape;
+    grid-column: 1/5;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.7rem;
 }
 
 @media screen and (min-width:640px) {
