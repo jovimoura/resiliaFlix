@@ -1,117 +1,96 @@
-var input = document.getElementById('sendMovie')
+var input = document.getElementById("sendMovie");
 
-var apiKey = 'd6dd773e'
+var apiKey = "d6dd773e";
 
-console.log(input)
+console.log(input);
 
+function pegaValue(Param) {
+  var tituloExiste = document.getElementById("searched");
 
+  if (tituloExiste != undefined) {
+    Param.removeChild(tituloExiste);
+  }
 
-input.addEventListener('keyup', ()=> {
+  var titulo = document.createElement("h2");
+  titulo.id = "searched";
+  titulo.textContent =
+    input.value == "" ? "" : "Resultados Para: " + input.value;
 
-        // Exibindo Frase "Resultados Para"
+  Param.appendChild(titulo);
+}
 
-        var contentArea = document.getElementById('contentArea')
-        var titulo = document.createElement('h2')
-        titulo.id = "searched"
-        titulo.textContent = input.value == "" ? "" : "Resultados Para: " + input.value
-        var tituloExiste = document.getElementById('searched')
+function pegaFilmes(Param) {
+  var pedido = new XMLHttpRequest();
 
-        if( tituloExiste != undefined) {
-            contentArea.removeChild(tituloExiste)
+  pedido.open(
+    "GET",
+    `https://www.omdbapi.com/?s=${input.value}&apikey=${apiKey}`
+  );
+
+  pedido.onload = () => {
+    var pedidoJSON = JSON.parse(pedido.responseText);
+
+    var arr = pedidoJSON.Search;
+    if (arr === undefined) {
+      var content = document.getElementById("content");
+      content.textContent = "";
+      if(input.value !== "") {
+        var erroH3 = document.createElement("h3");
+        erroH3.id = "error";
+        erroH3.textContent = "NENHUM RESULTADO ENCONTRADO";
+        Param.appendChild(content);
+        content.appendChild(erroH3);
+      }
+      else {
+        var info = document.createElement('h3')
+        info.id = 'error'
+        info.textContent = "O QUE DESEJA PROCURAR?"
+        Param.appendChild(content)
+        content.appendChild(info)
+      }
+    } 
+    else {
+      arr.map((filme) => {
+        var poster = filme.Poster;
+        var titulo = filme.Title;
+
+        if (poster != "N/A") {
+          var content = document.getElementById("content");
+          if (content.textContent == "NENHUM RESULTADO ENCONTRADO") {
+            content.textContent = "";
+          }
+
+          console.log(poster);
+          console.log(titulo);
+
+          Param.appendChild(content);
+
+          var contentItem = document.createElement("section");
+          contentItem.className = "contentItem";
+
+          content.appendChild(contentItem);
+
+          var img = document.createElement("img");
+          img.src = poster;
+          img.alt = titulo;
+          // var h2 = document.createElement('h2')
+          // h2.textContent = titulo
+
+          contentItem.appendChild(img);
+          // contentItem.appendChild(h2)
         }
-
-        console.log(titulo)
-
-        contentArea.appendChild(titulo)
-
-        //pegando
-
-            var pedido = new XMLHttpRequest()
-
-            pedido.open('GET', `https://www.omdbapi.com/?s=${input.value}&apikey=${apiKey}`)
-
-            pedido.onload = () => {
-
-            var pedidoJSON = JSON.parse(pedido.responseText)
-
-            var arr = (pedidoJSON.Search)
-
-            if(arr === undefined) {
-                var content = document.getElementById('content') 
-                content.textContent = ''
-                var erroH3 = document.createElement('h3')
-                erroH3.id = 'error'
-                erroH3.textContent = 'FILME NÃO ENCONTRADO'
-                contentArea.appendChild(content)
-                content.appendChild(erroH3)
-            }
-            else {
-
-            arr.map((filme)=>{
-
-                var content = document.getElementById('content') 
-                if(content.textContent == "FILME NÃO ENCONTRADO")
-                {
-                    content.textContent = ''
-                }
-
-                var poster = filme.Poster
-                var titulo = filme.Title
-                console.log(poster)
-                console.log(titulo)
-
-                
-
-                contentArea.appendChild(content)
-
-
-                var contentItem = document.createElement('section')
-                contentItem.className = 'contentItem'
-
-                content.appendChild(contentItem)
-
-                var img = document.createElement('img')
-                img.src = poster == "N/A" ? "noPhoto.jpg" : poster
-                img.alt = titulo
-                // var h2 = document.createElement('h2')
-                // h2.textContent = titulo
-
-                contentItem.appendChild(img)
-                // contentItem.appendChild(h2)
-
-
-
-
-
-
-
-
-                
-            })
-
-        }
-
+      });
     }
+  };
 
-            pedido.send()
+  pedido.send();
+}
 
-            //manipulando
+input.addEventListener("keyup", () => {
+  var contentArea = document.getElementById("contentArea");
 
-            
+  // Exibindo Frase "Resultados Para"
 
-
-
-            
-
-        
-
-
-            
-
-        
-
-
-        
-    
-})
-
+  pegaValue(contentArea);
+  pegaFilmes(contentArea);
+});

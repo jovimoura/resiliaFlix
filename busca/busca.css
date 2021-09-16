@@ -6,6 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; */
+    height: 150vh;
 }
 
 #searched {
@@ -26,7 +27,7 @@ body {
     color: rgb(168, 169, 173);
     height: 60px;
     font-size: 30px;
-    width: 100vw;
+    /* width: 100vw; */
 }
 
 
@@ -36,14 +37,22 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     /* align-items: center; */
-    height: 150vh;
+    
 }
 
+.contentImage {
+    height: 250px;
+    width: 280;
+    
+}
+
+
 .contentItem img {
-    height: 240px;
+    height: 200px;
     width: 240px;
     margin: 20px 0px 0px 20px
 }
+    
 
 #error {
     margin-top: 50px;
