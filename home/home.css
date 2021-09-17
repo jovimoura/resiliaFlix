@@ -1,20 +1,21 @@
 body {
-    background: rgb(12,21,60);
-    background: linear-gradient(0deg, rgba(12,21,60,1) 12%, rgba(9,16,46,1) 43%, rgba(4,7,20,1) 100%);
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(27,12,55,1) 100%);
     grid-template-areas: 
     'cabecalho'
     'carousel'
     'movies'
     'rodape';
     grid-template-columns: auto;
-    grid-template-rows: 50px auto auto auto;
+    grid-template-rows: 50px auto auto 40px;
     color: #dcdcdc;
+    font-family: 'Play', sans-serif;
 }
 
 header{
     grid-area: header;
     grid-column: 1/5;
-    background-color: rgb(9, 11, 19);
+    background: rgb(0,0,0);
     margin-bottom: 3rem;    
 }
 
@@ -96,19 +97,19 @@ header{
 }
 
 #carouselExampleIndicators {
-    border: 2px solid transparent;
+    border: 5px groove transparent;
     transition: 0.22s ease-in-out;
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
 }
 
 #carouselExampleIndicators:hover{
-    border: 2px solid rgba(255, 255, 255, 0.66);
+    border: 5px groove rgba(255, 255, 255, 0.66);
 }
 
 .carousel-inner .carousel-item img{
     max-width: 100%;
     max-height: 500px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .category {
@@ -122,7 +123,7 @@ header{
 
 .categoryItem {
     background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));
-    border: 2px solid rgba(249, 249, 249, 0.1);
+    border: 5px groove rgba(249, 249, 249, 0.1);
     border-radius: 10px;
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
     display: flex;
@@ -131,13 +132,13 @@ header{
     padding: 4rem;
     text-align: center;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: bolder;
     color: #dcdcdc;
     font-size: 1.5rem;
 }
 
 .categoryItem:hover {
-    border: 2px solid rgba(255, 255, 255, 0.66);
+    border: 5px groove rgba(255, 255, 255, 0.66);
     transition: .32s ease-in-out;
 }
 
@@ -185,14 +186,14 @@ header{
 .thumbTile__image {
     width: 14rem;
     height: 18rem;
-    border: 2px solid transparent;
+    border: 5px groove transparent;
     border-radius: 5px;
     transition: .32s ease-in-out;
     margin: 5% 0 5% 0;
 }
 
 .thumbTile__image:hover {
-    border: 2px solid rgba(255, 255, 255, 0.66);
+    border: 5px groove rgba(255, 255, 255, 0.66);
     transition: .32s ease-in;
     -webkit-transform: scale(1.04);
     -moz-transform: scale(1.04);
@@ -224,21 +225,37 @@ header{
 }
 
 .thumbTiles.swiper-button-prev::after, .thumbTiles.swiper-button-next::after {
-    color: #dcdcdc;
-    font-size: 4vw;
-    font-weight: bold;
+    visibility: hidden;
+    font-size: 2rem;
     transition: transform .1s ease-out;
+}
+
+.thumbTiles.swiper-button-prev:hover:after, .thumbTiles.swiper-button-next:hover:after{
+    visibility: visible;
+    color: #dcdcdc;
 }
 
 footer{
     grid-area: rodape;
     grid-column: 1/5;
-    margin-top: 3rem;
+    margin-top: 4rem;
     text-align: center;
     font-size: 0.7rem;
+    color: #dcdcdc3e;
 }
 
-@media screen and (min-width:640px) {
+footer a{
+    color: inherit;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: rgba(255,241,78,1);
+    transition: .5s;
+}
+
+@media(max-width: 768px) {
+
     .thumbTiles.swiper-button-prev::after, .thumbTiles.swiper-button-next::after {
         display: none;
         font-size: 2.4vw;
