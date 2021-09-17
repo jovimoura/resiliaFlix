@@ -4,6 +4,25 @@ var apiKey = "d6dd773e";
 
 console.log(input);
 
+// function levaParaInformacoes(param) {
+
+//   document.querySelectorAll('.filmesLista').forEach((x)=>{
+//     x.addEventListener('click', (x)=>{
+//         localStorage.setItem('idFilme', x.target.id);
+//         window.name = x.target.id;
+//         location.replace('../Infos/infos.html');
+//     })
+// })
+
+
+
+
+
+
+// }
+
+
+
 function pegaValue(Param) {
   var tituloExiste = document.getElementById("searched");
 
@@ -78,6 +97,15 @@ function pegaFilmes(Param) {
 
           contentItem.appendChild(img);
           // contentItem.appendChild(h2)
+
+
+          // setTimeout(()=>{
+          //   location.replace('../informacoes/informacoes.html?title='+titulo)
+          // })
+
+
+
+
         }
       });
     }
