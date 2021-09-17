@@ -1,185 +1,108 @@
-//  Pega Elementos
-var input = document.getElementById('pegaFilme')
-var button = document.getElementById('enviar')
-var descricao = document.getElementById('areaDeDescricao')
+var input = document.getElementById("sendMovie");
 
- 
+var apiKey = "d6dd773e";
 
-//console.log(descricao)
-//console.log(button)
-//console.log(input)
+console.log(input);
 
 
-// Função que busca as informações do filme
+function pegaValue(Param) {
+  var tituloExiste = document.getElementById("searched");
 
-function buscaApi(filme) {
+  if (tituloExiste != undefined) {
+    Param.removeChild(tituloExiste);
+  }
 
-var pedido = new XMLHttpRequest()
-var filmeAlterado = filme
-filmeAlterado = filmeAlterado.replace(' ', '+')
-try {
-    pedido.open('GET', `https://www.omdbapi.com/?apikey=d6dd773e&t=${filmeAlterado}`)
-    pedido.onload = function() {
-            var resposta = pedido.responseText
-            var respostaJson = JSON.parse(resposta)
+  var titulo = document.createElement("h2");
+  titulo.id = "searched";
+  titulo.textContent =
+    input.value == "" ? "" : "Resultados Para: " + input.value;
 
-            if(respostaJson.Response != 'False') {
-            
-            var filme = new motorDeBusca(
-                respostaJson.Title, 
-                respostaJson.Poster
-                )
-            filme.excluiDadosDom(descricao)
-            filme.inserirDadosDom(descricao)
-            
-            }
-
-            else{
-
-                var filme = new motorDeBusca(
-                    respostaJson.Title, 
-                    respostaJson.Poster
-                    )
-                filme.excluiDadosDom(descricao)    
-                filme.filmeNãoEncontrado(descricao)
-
-
-            }
-            
-            
-
-            
-    }
-
-    pedido.send()
-}
-catch(err) {
-    console.log(err)
+  Param.appendChild(titulo);
 }
 
-}
-// clase que cria um objeto do filme
+function pegaFilmes(Param) {
+  var pedido = new XMLHttpRequest();
 
-class motorDeBusca {
+  pedido.open(
+    "GET",
+    `https://www.omdbapi.com/?s=${input.value}&apikey=${apiKey}`
+  );
 
-    constructor(nome, imagem) {
-        this._imagemFilme = imagem;
-        this._tituloFilme = nome;
+  pedido.onload = () => {
+    var pedidoJSON = JSON.parse(pedido.responseText);
 
-        
-    }
+    var arr = pedidoJSON.Search;
+    console.log(arr)
+    if (arr === undefined) {
+      var content = document.getElementById("content");
+      content.textContent = "";
+      if(input.value !== "") {
+        var erroH3 = document.createElement("h3");
+        erroH3.id = "error";
+        erroH3.textContent = "NENHUM RESULTADO ENCONTRADO";
+        Param.appendChild(content);
+        content.appendChild(erroH3);
+      }
+      else {
+        var info = document.createElement('h3')
+        info.id = 'error'
+        info.textContent = "O QUE DESEJA PROCURAR?"
+        Param.appendChild(content)
+        content.appendChild(info)
+      }
+    } 
+    else {
+      arr.map((filme) => {
+        var poster = filme.Poster;
+        var titulo = filme.Title;
 
-    inserirDadosDom(element) {
+        if (poster != "N/A") {
+          var content = document.getElementById("content");
+          if (content.textContent == "NENHUM RESULTADO ENCONTRADO") {
+            content.textContent = "";
+          }
+
+          console.log(poster);
+          console.log(titulo);
+
+          Param.appendChild(content);
+
+          var contentItem = document.createElement("section");
+          contentItem.className = "contentItem";
+
+          content.appendChild(contentItem);
+
+          var img = document.createElement("img");
+          img.src = poster;
+          img.alt = titulo;
+          // var h2 = document.createElement('h2')
+          // h2.textContent = titulo
+
+          contentItem.appendChild(img);
+          // contentItem.appendChild(h2)
 
 
-        var img = document.createElement('img')
-        img.src = this._imagemFilme === 'N/A' || this._imagemFilme === undefined ? 'notFound.jpg' : this._imagemFilme
-        img.id = 'conteudoImagem'
+          contentItem.addEventListener('click', () => {
+            window.location.href = "../Informacoes/informacoes.html?q=" + titulo
+          })
 
 
-        var title = document.createElement('h2')
-        title.textContent = this._tituloFilme
-        title.id = 'conteudoTitulo'
-
-        element.appendChild(img)
-        element.appendChild(title)
-
-
-    }
-
-    excluiDadosDom(element) {
-        var existeImagem = document.getElementById('conteudoImagem')
-        var existeTitulo = document.getElementById('conteudoTitulo')
-
-        if(existeTitulo != undefined) {
-            element.removeChild(existeTitulo)
         }
-        if( existeImagem != undefined) {
-            element.removeChild(existeImagem)
-        }
+      });
     }
+  };
 
-    filmeNãoEncontrado(element) {
-
-        var mensagem = document.createElement('h2')
-        mensagem.id = 'conteudoTitulo'
-        mensagem.textContent = 'FILME NÃO ENCONTRADO'
-
-        // var img = document.createElement('img')
-        // img.src = this._imagemFilme === 'N/A' || this._imagemFilme === undefined ? 'notFound.jpg' : this._imagemFilme
-        // img.id = 'conteudoImagem'
-
-        // element.appendChild(img)
-        element.appendChild(mensagem)
-
-    }
-
-   
-   
-
-
-   
-
+  pedido.send();
 }
 
+input.addEventListener("keyup", () => {
+  var contentArea = document.getElementById("contentArea");
+
+  // Exibindo Frase "Resultados Para"
+
+  pegaValue(contentArea);
+  pegaFilmes(contentArea);
+});
 
 
-/*button.addEventListener('click' , () => {
-
-    buscaApi(input.value)
-
-})*/
-
-
-
-
-
-                        //CARROSSEL DE FILMES
-
-//array de filmes
-let arrayTerror = ["Hereditary","Insidious","Us","Run","The Blair Witch Project"];
-let arrayAcao = ["The Suicide Squad","Iron Man","Black Panther","Aquaman","Avengers: Infinity War","Man of Steel"];
-let arrayRomance = ["Your Name","Pride and Prejudice","About Time","Her","One Day"];
-let arrayDrama = ["Collateral Beauty","Whiplash","Moonlight","Knives Out","The Boy in the Striped Pyjamas"];
-let arraySeries = ["Naruto","The Witcher","La casa de papel","Game of Thrones","Bridgerton"];
-
-function carrossel(array,id){
-    console.log('funcao funciona')
-    let divPai = document.getElementById(id);
-    console.log(divPai)
-
-    for(let i = 0; i < array.length; i++){
-        console.log('loop ligado')
-        
-        
-        try {
-            console.log('try ligado')
-            let pedidO = new XMLHttpRequest();
-            pedidO.open('GET',`https://www.omdbapi.com/?apikey=d6dd773e&t=${array[i]}`);
-            pedidO.onload = ()=>{
-                console.log('pedido funciona')
-                let resposta = pedidO.responseText;
-                let respostaJSON = JSON.parse(resposta);
-
-                let poster = respostaJSON.Poster;
-
-                let div = document.createElement('div');
-                let img = document.createElement('img');
-                let p = document.createElement('p');
-
-                img.setAttribute('src',poster);
-                p.textContent = respostaJSON.Plot;
-
-                div.append(img);
-                div.append(p);
-                divPai.append(div);
-
-            };
-        }
-        catch(err) {
-            console.log(err)
-        }
-    }
-}
-
-carrossel(arrayAcao,'carrossel__acao');
+console.log(document.getElementsByClassName('contentItem'))
