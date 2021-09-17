@@ -1,6 +1,6 @@
 body {
-    background: rgb(12,21,60);
-    background: linear-gradient(0deg, rgba(12,21,60,1) 12%, rgba(9,16,46,1) 43%, rgba(4,7,20,1) 100%);
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(27,12,55,1) 100%);
     /* height: 150vh; */
     /* display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@ body {
     font-family: Avenir-Heavy;
     letter-spacing: 1.17px;
     /* position: fixed; */
-    margin: 30px 0;
+    margin: 1.5rem 1rem 0 1rem ;
     text-align: left;
     left: 0px;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
@@ -35,28 +35,38 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
+    font-family: 'Play', sans-serif;
     /* align-items: center; */
     
 }
 
 .contentImage {
-    height: 250px;
-    width: 280;
+    height: 19rem;
+    width: 13rem;
     
 }
 
 
 .contentItem img {
-    height: 200px;
-    width: 240px;
-    margin: 20px 0px 0px 20px
+    border: 3px solid transparent;
+    border-radius: 5px;
+    height: 19rem;
+    width: 13rem;
+    margin: 1rem 0 0 1rem;
+    transition: all .32s ease-in-out;
+}
+
+.contentItem img:hover {
+    border: 3px solid #fdfdfd;
 }
     
 
 #error {
     margin-top: 50px;
+    margin-right: 5rem;
     text-align: center;
     font-size: 50px;
     color: white;
+    font-family: 'Play', sans-serif;
 }

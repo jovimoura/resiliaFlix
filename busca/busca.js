@@ -15,7 +15,7 @@ function pegaValue(Param) {
   var titulo = document.createElement("h2");
   titulo.id = "searched";
   titulo.textContent =
-    input.value == "" ? "" : "Resultados Para: " + input.value;
+    input.value == "" ? "" : "Resultados para: " + input.value;
 
   Param.appendChild(titulo);
 }
@@ -39,14 +39,14 @@ function pegaFilmes(Param) {
       if(input.value !== "") {
         var erroH3 = document.createElement("h3");
         erroH3.id = "error";
-        erroH3.textContent = "NENHUM RESULTADO ENCONTRADO";
+        erroH3.textContent = "Nenhum resultado encontrado";
         Param.appendChild(content);
         content.appendChild(erroH3);
       }
       else {
         var info = document.createElement('h3')
         info.id = 'error'
-        info.textContent = "O QUE DESEJA PROCURAR?"
+        info.textContent = "O que deseja procurar?"
         Param.appendChild(content)
         content.appendChild(info)
       }
@@ -59,7 +59,7 @@ function pegaFilmes(Param) {
 
         if (poster != "N/A") {
           var content = document.getElementById("content");
-          if (content.textContent == "NENHUM RESULTADO ENCONTRADO") {
+          if (content.textContent == "Nenhum resultado encontrado...") {
             content.textContent = "";
           }
 
