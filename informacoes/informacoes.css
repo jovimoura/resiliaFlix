@@ -1,4 +1,99 @@
+body {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(27,12,55,1) 100%);
+}
+
 main {
     display: flex;
     flex-direction: row;
+}
+
+#box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+#poster {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    margin: 2rem;
+}
+
+#poster:hover {
+    border: 2px solid #fdfdfd;
+    transition:all .32s ease-in-out;
+}
+
+#title, #sinopse, #type, #time, #year {
+    color: #fdfdfd;
+    font-family: 'Play', sans-serif;
+}
+
+#title {
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+#sinopse {
+    font-size:1.1945rem;
+    margin: 1rem;
+}
+
+#box_informacoes {
+    border: 5px groove transparent;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#information {
+    display: flex;
+    flex-direction: column;
+}
+
+#year, #type, #time {
+    font-size: .7rem;
+    margin: 0;
+}
+
+#box-btn {
+    display: flex;
+    justify-content: center;
+}
+
+#play-btn{
+    background: #fdfdfd;
+    color: #000;
+    font-size: 2rem;
+    font-family: 'Play', sans-serif;
+    padding: .1rem 1rem .1rem 1rem;
+    transition:all .32s ease-in-out;
+    border: 2px groove #fdfdfd;
+    border-radius: 10px;
+    margin: .4rem;
+}
+
+#add-btn {
+    background: #000;
+    color: #fdfdfd;
+    font-size: 2rem;
+    font-family: 'Play', sans-serif;
+    padding: .1rem 1rem .1rem 1rem;
+    transition:all .32s ease-in-out;
+    border: 2px solid #fdfdfd;
+    border-radius: 100%;
+    margin: .4rem;
+}
+
+#play-btn:hover, #add-btn:hover {
+    background:#000;
+    color: #fdfdfd;
+    cursor: pointer;
+}
+
+#add-btn:hover {
+    background: #fdfdfd;
+    cursor: pointer;
+    color: #000;
 }

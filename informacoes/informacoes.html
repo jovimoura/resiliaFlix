@@ -4,19 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="informacoes.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&family=Roboto:wght@900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./informacoes.css">
+    <script src="./informacoes.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <main>
-        <section class="leftSide">
-            <img id="poster" src="" alt="">
-        </section>
-        <section class="RightSide">
-            <p id="sinopse">
+        <div id="box">
+            <section id="box_poster" class="leftSide">
+                <img id="poster" src="" alt="">
+            
+            </section>
+            <section id="box_informacoes" class="RightSide">
+                <h2 id="title"></h2>
+                <div id="information">
+                    <p id="sinopse"></p>
+                    <p id="year"></p>
+                    <p id="type"></p>
+                    <P id="time"></P>
+                </div>
+                <div id="box-btn">
+                    <button id="play-btn">Play</button>
+                    <button id="add-btn">+</button>
+                </div>
                 
-            </p>
-        </section>
+            </section>
+        </div>
+        
     </main>
 </body>
 </html>

@@ -1,6 +1,10 @@
 var apiKey = "d6dd773e";
-var poster = document.getElementById('poster')
-var sinopse = document.getElementById('sinopse')
+var poster = document.getElementById('poster');
+var sinopse = document.getElementById('sinopse');
+let title = document.getElementById('title');
+let year = document.getElementById('year')
+let type = document.getElementById('type');
+let time = document.getElementById('time')
 
 
 // Pega Parametro
@@ -26,6 +30,11 @@ pedido.onload = () => {
   console.log(sinopse)
   poster.src = arr.Poster
   sinopse.textContent = arr.Plot
+  title.textContent = arr.Title
+  type.textContent = arr.Genre
+  year.textContent = arr.Year;
+  time.textContent = arr.Runtime
+
   
   
 };

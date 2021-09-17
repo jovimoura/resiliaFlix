@@ -55,6 +55,7 @@ function pegaFilmes(Param) {
       arr.map((filme) => {
         var poster = filme.Poster;
         var titulo = filme.Title;
+        let plot = filme.Plot;
 
         if (poster != "N/A") {
           var content = document.getElementById("content");
@@ -75,11 +76,14 @@ function pegaFilmes(Param) {
           var img = document.createElement("img");
           img.src = poster;
           img.alt = titulo;
-          // var h2 = document.createElement('h2')
-          // h2.textContent = titulo
+          //var h2 = document.createElement('h2')
+          //h2.textContent = titulo
+          //let p = document.createElement('p');
+          //p.textContent = plot
 
           contentItem.appendChild(img);
-          // contentItem.appendChild(h2)
+          /*contentItem.appendChild(h2);
+          contentItem.append(p);*/
 
 
           contentItem.addEventListener('click', () => {
