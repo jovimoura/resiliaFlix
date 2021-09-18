@@ -55,11 +55,11 @@ function pegaFilmes(Param) {
       arr.map((filme) => {
         var poster = filme.Poster;
         var titulo = filme.Title;
-        let plot = filme.Plot;
+        let year = filme.Year;
 
         if (poster != "N/A") {
           var content = document.getElementById("content");
-          if (content.textContent == "Nenhum resultado encontrado...") {
+          if (content.textContent == "Nenhum resultado encontrado") {
             content.textContent = "";
           }
 
@@ -87,7 +87,7 @@ function pegaFilmes(Param) {
 
 
           contentItem.addEventListener('click', () => {
-            window.location.href = "../Informacoes/informacoes.html?q=" + titulo
+            window.location.href = "../Informacoes/informacoes.html?q=" + titulo + "&y=" + year
           })
 
 

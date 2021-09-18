@@ -10,15 +10,20 @@ let time = document.getElementById('time');
 // Pega Parametro
 
 const urlParams = new URLSearchParams(window.location.search);
-var myParam = urlParams.get('q');
-myParam = myParam.replaceAll(" ", "+")
-console.log(myParam)
+var myParamQ = urlParams.get('q');
+myParamQ = myParamQ.replaceAll(" ", "+")
+console.log(myParamQ)
 
+var myParamY = urlParams.get('y');
+console.log(myParamY)
+myParamY
 var pedido = new XMLHttpRequest();
+
+
 
 pedido.open(
   "GET",
-  `https://www.omdbapi.com/?t=${myParam}&apikey=${apiKey}`
+  `https://www.omdbapi.com/?t=${myParamQ}&apikey=${apiKey}&y=${myParamY}`
 );
 
 pedido.onload = () => {
