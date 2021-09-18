@@ -132,7 +132,6 @@ header{
     text-align: center;
     text-transform: uppercase;
     font-weight: bolder;
-    
     font-size: 1.5rem;
 }
 
@@ -260,6 +259,38 @@ footer a:hover{
 }
 
 @media(max-width: 768px) {
+
+    .navbar-nav {
+        margin: 0 0 0 1rem;
+    }
+
+    .nav-item {
+        width: 80%;
+    }
+
+    #search {
+        margin-left: 0;
+    }
+
+    #carouselExampleIndicators {
+        display: none;
+    }
+
+    .category {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .categoryItem {
+        margin-bottom: 0.5rem;
+        width: 40%;
+    }
+
+    .categoryItem a {
+        font-size: 1rem;
+        padding: 1rem;
+    }
 
     .thumbTiles.swiper-button-prev::after, .thumbTiles.swiper-button-next::after {
         display: none;
