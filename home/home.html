@@ -59,7 +59,7 @@
                         <a class="nav-link" href="#"><i class="fas fa-user-check"></i>Cadastre-se</a>
                     </li>
                     <li class="nav-item">
-                        <a id="search" class="nav-link" href="#"><i class="fas fa-search"></i>Pesquisar</a>
+                        <a id="search" class="nav-link" href="../busca/busca.html"><i class="fas fa-search"></i>Pesquisar</a>
                     </li>
                     <li id="nav-dropdown" class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -130,11 +130,21 @@
 
             <div>
                 <ul class="category">
-                    <li class="categoryItem">Ação</li>
-                    <li class="categoryItem">Romance</li>
-                    <li class="categoryItem">Terror</li>
-                    <li class="categoryItem">Drama</li>
-                    <li class="categoryItem">Séries</li>
+                    <li class="categoryItem">
+                        <a target="blank" href="#acao" class="acao">Ação</a>
+                    </li>
+                    <li class="categoryItem">
+                        <a href="#romance">Romance</a>
+                    </li>
+                    <li class="categoryItem">
+                        <a href="#terror">Terror</a>
+                    </li>
+                    <li class="categoryItem">
+                        <a href="#drama">Drama</a>
+                    </li>
+                    <li class="categoryItem">
+                        <a href="#serie">Séries</a>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -143,7 +153,7 @@
     <section class="thumbSection">
         <!--Ação-->
         <h2 class="thumbTitle">Ação</h2>
-        <div class="thumbTiles swiper">
+        <div id="acao" class="thumbTiles swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -151,7 +161,7 @@
                     <a class="thumbTile" href="#">
                         <img class="thumbTile__image"
                             src="https://m.media-amazon.com/images/M/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_SX300.jpg"
-                            alt="aquaman">
+                            alt="Aquaman">
                     </a>
                 </div>
                 <div class="swiper-slide">
@@ -189,7 +199,7 @@
         </div>
 
         <!--Romance-->
-        <h2 class="thumbTitle">Romance</h2>
+        <h2 id="romance" class="thumbTitle">Romance</h2>
         <div class="thumbTiles swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -237,7 +247,7 @@
 
         <!--Drama-->
         <h2 class="thumbTitle">Drama</h2>
-        <div class="thumbTiles swiper">
+        <div id="drama" class="thumbTiles swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -284,7 +294,7 @@
 
         <!--Terror-->
         <h2 class="thumbTitle">Terror</h2>
-        <div class="thumbTiles swiper">
+        <div id="terror" class="thumbTiles swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -331,7 +341,7 @@
 
         <!--Series-->
         <h2 class="thumbTitle">Séries</h2>
-        <div class="thumbTiles swiper">
+        <div id="series" class="thumbTiles swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -419,7 +429,7 @@
             }
         });
     </script>
-    <script src="./home.js"></script>
+    
 </body>
 
 </html>

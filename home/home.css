@@ -129,12 +129,17 @@ header{
     display: flex;
     justify-content: center;
     width: 18%;
-    padding: 4rem;
     text-align: center;
     text-transform: uppercase;
     font-weight: bolder;
-    color: #dcdcdc;
+    
     font-size: 1.5rem;
+}
+
+.categoryItem a {
+    text-decoration: none ;
+    color: #dcdcdc;
+    padding: 4rem;
 }
 
 .categoryItem:hover {

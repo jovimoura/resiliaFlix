@@ -6,8 +6,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; */
-    height: 150vh;
+    height: 100vh;
 }
+
 
 #searched {
     color: white;
@@ -17,16 +18,21 @@ body {
     font-family: Avenir-Heavy;
     letter-spacing: 1.17px;
     /* position: fixed; */
-    margin: 1.5rem 1rem 0 1rem ;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 0;
     text-align: left;
+    align-items: center;
     left: 0px;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
     outline: none;
     background: rgb(75, 78, 90);
     border: none;
     color: rgb(168, 169, 173);
-    height: 60px;
-    font-size: 30px;
+    height: 3.9rem;
+    font-size: 2.3rem;
+    padding: 0;
     /* width: 100vw; */
 }
 
@@ -63,10 +69,33 @@ body {
     
 
 #error {
-    margin-top: 50px;
+    margin-top: 1.8rem;
     margin-right: 5rem;
     text-align: center;
     font-size: 50px;
     color: white;
     font-family: 'Play', sans-serif;
+}
+
+
+@media (max-width:760px) {
+    body {
+        background-attachment: fixed;
+    }
+    
+    #content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #content img {
+        border: 5px solid transparent;
+        border-radius: 5px;
+        margin: 0;
+    }
+
+    #error {
+        margin-right: 0;
+        align-items: center;
+    }
 }
