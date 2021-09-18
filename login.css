@@ -9,15 +9,81 @@ body{
     'main'
     'footer';
     grid-template-columns: auto;
-    grid-template-rows: 60px auto 40px;
+    grid-template-rows: 100px auto 40px;
     height: 100%;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Play', sans-serif;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(27,12,55,1) 100%);
+    background-attachment: fixed;
 }
 
 header{
     grid-area: header;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 50%, rgba(233,233,233,1) 100%);
+    background: rgb(0,0,0);
+    margin-bottom: 3rem; 
+}
+
+.navbar{
+    padding: 0 0 0 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.mr-auto{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand{
+    font-size: 4rem;
+    margin: 0 4rem 0 0;
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    margin: 0 0 0 10rem;
+}
+
+.nav-item{
+    width: 25%;
+    list-style: none;
+}
+
+#search{
+    margin-left: 15%;
+}
+
+#nav-dropdown{
+    width: 15%;
+}
+
+.nav-item:hover{
+    color: #dcdcdc;
+}
+
+.dropdown-toggle{
+    color: rgba(255,255,255,.55);
+}
+
+.dropdown-toggle:hover{
+    color: #dcdcdc;
+}
+
+.dropdown-toggle:focus{
+    color: #dcdcdc;
+}
+
+.dropdown-menu a{
+    color: #121212;
+}
+
+.dropdown-item img{
+    width: 20px;
+    height: 20px;
+    margin-right: 4%;
 }
 
 main{
@@ -27,13 +93,42 @@ main{
     align-items: center;
 }
 
-.home_main{
-    height: 100%;    
+.top_home_main{
+    background-image: url("./summer-movies-2021-new-e1620919489437.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.image_main{
-    width: 100%;
-    height: 100%;
+.marketing{
+    font-family: 'Play', sans-serif;
+    font-size: 2em;
+    font-weight: bolder;
+    color: white;
+}
+
+.mid_home_main{
+    display: flex;
+    justify-content: flex-start;
+    border-top: 2em double black;
+}
+
+.img_mid{
+    border-radius: 0 2em;
+    height: 50%;
+    width: 50%;
+}
+
+#cadastrar_home{
+    height: 9%;
+    width: 20%;
+    border-radius: 1.5rem;
+    background-color: #5b038a;
 }
 
 .dropdown{
@@ -45,7 +140,7 @@ main{
 .dropdown_list{
     border: 5px solid black;
     border-radius: 20px;
-    width: 55%;
+    width: 80%;
 }
 
 .dropdown_list_item{
@@ -53,11 +148,18 @@ main{
 }
 
 .button_collapse{
-    width: 95%;
+    width: 96%;
+    padding: 0.5em;
+    background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));
+    color: white;
+}
+
+.card-body{
+    width: 95.9%;
 }
 
 h2{
-    line-height: 2em;
+    line-height: 3em;
     font-size: 2em;
     text-transform: uppercase;
     font-weight: bolder;
@@ -75,14 +177,15 @@ h2{
 }
 
 .container_signup{
+    background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));
+    border: 5px groove rgba(249, 249, 249, 0.1);
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
     display: flex;
     flex-direction: column;
     width: 40%;
-    height: 95%;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 0 2em lightgrey;
-    padding: 15px;
+    margin: 2.5rem 0 2.5rem 0;
+    color: #dcdcdc;
 
 }
 
@@ -91,7 +194,7 @@ h2{
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    padding: 2em;
+    padding: 1.5em;
     height: 100%;
 }
 
@@ -225,8 +328,19 @@ img{
 
 footer{
     grid-area: footer;
-    background: rgb(233,233,233);
-    background: linear-gradient(0deg, rgba(233,233,233,1) 0%, rgba(235,235,235,1) 50%, rgba(255,255,255,1) 100%);
+    text-align: center;
+    font-size: 0.7rem;
+    color: #dcdcdc3e;
+}
+
+footer a{
+    color: inherit;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: rgba(255,241,78,1);
+    transition: .5s;
 }
 
 @media (max-width: 760px){

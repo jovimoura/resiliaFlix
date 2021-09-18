@@ -22,7 +22,6 @@ function meu_callback(conteudo) {
         alert("CEP não encontrado.");
     }
 }
-    
  
 function consultaCEP(valor) {
 
