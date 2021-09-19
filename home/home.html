@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!--Informações sobre a página-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G3+</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&family=Roboto:wght@900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+    <!--JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a3e340081b.js" crossorigin="anonymous"></script>
+    <!--SWIPER-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar navbar-dark">
+            <h1 class="navbar-brand">G3+</h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-home"></i>Início</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fas fa-sign-in-alt"></i>Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-user-check"></i>Cadastre-se</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="search" class="nav-link" href="../busca/busca.html"><i class="fas fa-search"></i>Pesquisar</a>
+                    </li>
+                    <li id="nav-dropdown" class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                class="fas fa-user"></i></a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://github.com/GiovannaRossi" target="blank"><img
+                                    src="icon 1.jpeg">Giovana Rossi</a>
+                            <a class="dropdown-item" href="https://github.com/Henrique-Git" target="blank"><img
+                                    src="icon 2.jpeg">Henrique Medeiros</a>
+                            <a class="dropdown-item" href="https://github.com/jovimoura" target="blank"><img
+                                    src="icon 3.jpeg">João Victor Moura</a>
+                            <a class="dropdown-item" href="https://github.com/laoliveir" target="blank"><img
+                                    src="icon 4.jpeg">Larissa Oliveira</a>
+                            <a class="dropdown-item" href="https://github.com/WellHarper" target="blank"><img
+                                    src="icon 5.jpeg">Wellerson Ramos</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fas fa-plus"></i>Adicionar perfil</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="home_principal">
+        <section class="infoSection">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="../Informacoes/informacoes.html?q=Knives Out">
+                            <img src="https://m.media-amazon.com/images/G/01/digital/video/sonata/svod_row_sh_knivesout/005b9bed-8ea0-4036-a160-6376a1e4e8d2._UR3000,600_SX1500_FMwebp_.jpg"
+                                alt="" .>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="../Informacoes/informacoes.html?q=Mr Robot">
+                            <img src="https://m.media-amazon.com/images/S/sonata-images-prod/SVOD_ROW_MrRobot_S4/09be0ebc-6452-4d9b-9de0-da7bb5c312d7._UR3000,600_SX1500_FMwebp_.jpeg"
+                                alt="">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="../Informacoes/informacoes.html?q=Spider-Man: Far from Home">
+                            <img src="https://m.media-amazon.com/images/S/sonata-images-prod/SVOD_ROW_SH_SpiderMan/20a51c69-9b07-4448-8a09-6c208feb2f6b._UR3000,600_SX1500_FMwebp_.jpeg"
+                                alt="">
+                        </a>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div>
+                <ul class="category">
+                    <li class="categoryItem">
+                        <a target="blank" href="#acao" class="acao">Ação</a>
+                    </li>
+                    <li class="categoryItem">
+                        <a href="#romance">Romance</a>
+                    </li>
+                    <li class="categoryItem">
+                        <a href="#terror">Terror</a>
+                    </li>
+                    <li class="categoryItem">
+                        <a href="#drama">Drama</a>
+                    </li>
+                    <li class="categoryItem">
+                        <a href="#serie">Séries</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <section class="thumbSection">
+        <!--Ação-->
+        <h2 class="thumbTitle">Ação</h2>
+        <div id="acao" class="thumbTiles swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Aquaman">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_SX300.jpg"
+                            alt="Aquaman">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Black Panther">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_SX300.jpg"
+                            alt="Pantera Negra">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Man of Steel">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BMTk5ODk1NDkxMF5BMl5BanBnXkFtZTcwNTA5OTY0OQ@@._V1_SX300.jpg"
+                            alt="Super Man">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Avengers: Endgame">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg"
+                            alt="Infinity War">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=The Suicide Squad">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BNGM3YzdlOWYtNjViZS00MTE2LWE1MWUtZmE2ZTcxZjcyMmU3XkEyXkFqcGdeQXVyODEyMTI1MjA@._V1_.jpg"
+                            alt="Esquadrão Suicida">
+                    </a>
+                </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="thumbTiles swiper-button-prev"></div>
+            <div class="thumbTiles swiper-button-next"></div>
+        </div>
+
+        <!--Romance-->
+        <h2 id="romance" class="thumbTitle">Romance</h2>
+        <div class="thumbTiles swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Kimi no na wa&y=2016
+                    ">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BODRmZDVmNzUtZDA4ZC00NjhkLWI2M2UtN2M0ZDIzNDcxYThjL2ltYWdlXkEyXkFqcGdeQXVyNTk0MzMzODA@._V1_SX300.jpg"
+                            alt="Your Name">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Pride & Prejudice&y=2005">
+                        <img class="thumbTile__image"
+                            src="https://colorindonuvens.files.wordpress.com/2013/03/pride-prejudice.jpg"
+                            alt="Orgulho e Preconceito">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=About Time">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BMTA1ODUzMDA3NzFeQTJeQWpwZ15BbWU3MDgxMTYxNTk@._V1_SX300.jpg"
+                            alt="About Time">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Her">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_SX300.jpg"
+                            alt="Her">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=One Day">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BMTQ3NTg2MDI3NF5BMl5BanBnXkFtZTcwMjc5MTA1NA@@._V1_SX300.jpg"
+                            alt="One Day">
+                    </a>
+                </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="thumbTiles swiper-button-prev"></div>
+            <div class="thumbTiles swiper-button-next"></div>
+        </div>
+
+        <!--Drama-->
+        <h2 class="thumbTitle">Drama</h2>
+        <div id="drama" class="thumbTiles swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Collateral Beauty">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BMTQ5ODE4MTY2NV5BMl5BanBnXkFtZTgwMzM2NzEzMDI@._V1_SX300.jpg"
+                            alt="Collateral Beauty">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Whiplash">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BOTA5NDZlZGUtMjAxOS00YTRkLTkwYmMtYWQ0NWEwZDZiNjEzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+                            alt="Whiplash">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Moonlight">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BNzQxNTIyODAxMV5BMl5BanBnXkFtZTgwNzQyMDA3OTE@._V1_SX300.jpg"
+                            alt="Moonlight">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Knives Out">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_SX300.jpg"
+                            alt="Knives Out">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=The Boy in the Striped Pyjamas">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BMTMzMTc3MjA5NF5BMl5BanBnXkFtZTcwOTk3MDE5MQ@@._V1_SX300.jpg"
+                            alt="O menino do pijama listrado">
+                    </a>
+                </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="thumbTiles swiper-button-prev"></div>
+            <div class="thumbTiles swiper-button-next"></div>
+        </div>
+
+        <!--Terror-->
+        <h2 class="thumbTitle">Terror</h2>
+        <div id="terror" class="thumbTiles swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Hereditary">
+                        <img id="terror1" class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BOTU5MDg3OGItZWQ1Ny00ZGVmLTg2YTUtMzBkYzQ1YWIwZjlhXkEyXkFqcGdeQXVyNTAzMTY4MDA@._V1_SX300.jpg"
+                            alt="Hereditary">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Insidious">
+                        <img id="terror2" class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BMTYyOTAxMDA0OF5BMl5BanBnXkFtZTcwNzgwNTc1NA@@._V1_SX300.jpg"
+                            alt="Insidious">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Us">
+                        <img id="terror3" class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BZTliNWJhM2YtNDc1MC00YTk1LWE2MGYtZmE4M2Y5ODdlNzQzXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_SX300.jpg"
+                            alt="Us">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Run">
+                        <img id="terror4" class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BZjdmZDlkMzItNTg0OS00MjAxLWE0ZTQtZjdhOWM1MTJkOTc0XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg"
+                            alt="Run">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=The Blair Witch Project">
+                        <img id="terror5" class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BNzQ1NDBlNDItMDAyYS00YTI2LTgwMmYtMzAwMzg4NDFlM2ZmXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+                            alt="The Blair Witch Project">
+                    </a>
+                </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="thumbTiles swiper-button-prev"></div>
+            <div class="thumbTiles swiper-button-next"></div>
+        </div>
+
+        <!--Series-->
+        <h2 class="thumbTitle">Séries</h2>
+        <div id="series" class="thumbTiles swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Naruto">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BZmQ5NGFiNWEtMmMyMC00MDdiLTg4YjktOGY5Yzc2MDUxMTE1XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
+                            alt="Naruto">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Bridgerton">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BYjIxMzZhMTMtNDQ1Mi00OTMwLTk2M2ItYzA0YmNjNDFlOTdhXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"
+                            alt="Bridgerton">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=The Witcher">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BOGE4MmVjMDgtMzIzYy00NjEwLWJlODMtMDI1MGY2ZDlhMzE2XkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_SX300.jpg"
+                            alt="The Witcher">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=La casa de papel">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BNDJkYzY3MzMtMGFhYi00MmQ4LWJkNTgtZGNiZWZmMTMxNzdlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_SX300.jpg"
+                            alt="La casa de papel">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="thumbTile" href="../Informacoes/informacoes.html?q=Game Of Thrones">
+                        <img class="thumbTile__image"
+                            src="https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_SX300.jpg"
+                            alt="Game Of Thrones">
+                    </a>
+                </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="thumbTiles swiper-button-prev"></div>
+            <div class="thumbTiles swiper-button-next"></div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <p>
+            Todos os direitos reservados &copy; 2021<br>
+            Grupo 3 | T8 <a href="https://www.resilia.work/" target="blank">Resilia</a>
+        </p>
+    </footer>
+
+    <!--JS-->
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            spaceBetween: 5,
+            slidesPerView: 2,
+            loop: true,
+            freeMode: true,
+            loopAdditionalSlides: 5,
+            speed: 500,
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                //width >= 640px
+                640: {
+                    slidesPerView: 5,
+                    slidesPerGroup: 5,
+                    freeMode: false
+                },
+                400: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 4
+                },
+                380: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    freeMode: false
+                }
+
+            }
+        });
+    </script>
+    
+</body>
+
+</html>
