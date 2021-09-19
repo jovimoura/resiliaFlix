@@ -94,7 +94,7 @@ main{
 }
 
 .top_home_main{
-    background-image: url("./summer-movies-2021-new-e1620919489437.jpg");
+    background-image: url("./images/summer-movies-2021-new-e1620919489437.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -103,19 +103,62 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: 0.5em solid rgba(114, 113, 113, 0.912);
+}
+
+.divMarketing{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 0.6em groove transparent;
+    border-radius: 1em;
+    color: white;
+    -webkit-backdrop-filter: blur(1.5em);
+    backdrop-filter: blur(1.5em);
 }
 
 .marketing{
     font-family: 'Play', sans-serif;
     font-size: 2em;
     font-weight: bolder;
-    color: white;
+    text-align: center;
+}
+
+#marketing2{
+    line-height: 4em;
+    font-size: 1.5em;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 0.5em solid rgba(114, 113, 113, 0.912); 
+}
+
+.icons li{
+    border: 2px solid black;
+    border-radius: 3em;
+    background-color: white;
+    margin-bottom: 3.5em;
+}
+
+.watch i{
+    padding: 1.5em;
+    color: black;
+    font-size: 2em;
 }
 
 .mid_home_main{
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
-    border-top: 2em double black;
 }
 
 .img_mid{
