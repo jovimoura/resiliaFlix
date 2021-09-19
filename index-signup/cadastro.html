@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://kit.fontawesome.com/a3e340081b.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d9be93bd82.js" crossorigin="anonymous"></script>
+    <script src="validation.js"></script>
+
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar navbar-dark">
+          <h1 class="navbar-brand">G3+</h1>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#"><i class="fas fa-home"></i>Início</a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#"><i class="fas fa-sign-in-alt"></i>Login</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#"><i class="fas fa-user-check"></i>Cadastre-se</a>
+                  </li>
+                  <li class="nav-item">
+                      <a id="search" class="nav-link" href="#"><i class="fas fa-search"></i>Pesquisar</a>
+                  </li>
+                  <li id="nav-dropdown" class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                              class="fas fa-user"></i></a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="https://github.com/GiovannaRossi" target="blank"><img
+                                  src="icon 1.jpeg">Giovana Rossi</a>
+                          <a class="dropdown-item" href="https://github.com/Henrique-Git" target="blank"><img
+                                  src="icon 2.jpeg">Henrique Medeiros</a>
+                          <a class="dropdown-item" href="https://github.com/jovimoura" target="blank"><img
+                                  src="icon 3.jpeg">João Victor Moura</a>
+                          <a class="dropdown-item" href="https://github.com/laoliveir" target="blank"><img
+                                  src="icon 4.jpeg">Larissa Oliveira</a>
+                          <a class="dropdown-item" href="https://github.com/WellHarper" target="blank"><img
+                                  src="icon 5.jpeg">Wellerson Ramos</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#"><i class="fas fa-plus"></i>Adicionar perfil</a>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    </header>
+
+    <main>
+        <div class="container_signup">
+            <form method="GET" action="." class="form">
+                <h2>CADASTRO</h2>
+
+                <label for="nome_sobrenome">Nome Completo</label>
+                <div class="input-group mb-3">
+                    <input type="text" name="nome" id="nome_sobrenome" class="form-control form-control-sm" required>
+                </div>    
+            
+                <label for="email">E-mail</label>
+                <div class="input-group mb-3">
+                    <input placeholder="Exemplo@Dominio.com" type="email" name="email" id="email" class="form-control form-control-sm" onblur="validateEmail(this.value)" required>
+                </div>
+
+                <label for="senha">Senha</label>
+                <div class="input-group mb-3">
+                    <input type="password" name="senha" id="senha" class="form-control form-control-sm" required>
+                    <span class="input-group-text" id="basic-addon1-bg" onclick="mostrarSenha()">
+                        <i class="fas fa-eye" id="little-eye"></i>
+                    </span>
+                </div>
+            
+                <label for="confirmSenha">Confirmação de Senha</label>
+                <div class="input-group mb-3">
+                    <input type="password" name="confirmSenha" id="confirmSenha" class="form-control form-control-sm" onblur="validateSenha(this.value)" required>
+                </div>
+            
+                <label for="rg">RG</label>
+                <div class="input-group mb-3">
+                    <input type="text" name="rg" id="rg" class="form-control form-control-sm" onblur="validateRG(this.value)" required> 
+                </div>
+
+                <label for="cep">CEP</label>
+                <div class="input-group mb-3">
+                    <input type="text" name="cep" id="cep" class="form-control form-control-sm" onblur="consultaCEP(this.value)">
+                </div>
+
+                <label for="cidade">Cidade</label>
+                <div class="input-group mb-3">
+                    <input type="text" name="cidade" id="cidade" class="form-control form-control-sm" disabled>
+                </div>
+
+                <label for="estado">Estado</label>
+                <div class="input-group mb-3">
+                    <input type="text" name="estado" id="estado" class="form-control form-control-sm" disabled>
+                </div>
+
+                <label for="rua">Rua</label>
+                <div class="input-group mb-3">
+                    <input type="text" name="rua" id="rua" class="form-control form-control-sm" disabled>
+                </div>
+
+                <label for="bairro">Bairro</label>
+                <div class="input-group mb-3">
+                    <input type="text" name="bairro" id="bairro" class="form-control form-control-sm" disabled>
+                </div>
+
+                <label for="numero">Número</label>
+                <div class="input-group mb-3">
+                    <input type="text" name="numero" id="numero" class="form-control form-control-sm">
+                </div>
+
+                <input type="submit" name="cadastrar" class="btn btn-primary" id="cadastrar" value="Cadastrar">
+
+            </form>
+        </div>
+    </main>
+
+    <footer class="rodape">
+      <p>
+          Todos os direitos reservados &copy; 2021<br>
+          Grupo 3 | T8 <a href="https://www.resilia.work/" target="blank">Resilia</a>
+      </p>
+  </footer>
+    
+</body>
+</html>
