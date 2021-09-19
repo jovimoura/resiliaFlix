@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qual o Nome | Página Inicial</title>
+    <title>G3+ | Página Inicial</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="reset.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
@@ -15,12 +16,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/d9be93bd82.js" crossorigin="anonymous"></script>    
-
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar navbar-dark">
@@ -32,36 +43,11 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-home"></i>Início</a>
-                    </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="#"><i class="fas fa-sign-in-alt"></i>Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-user-check"></i>Cadastre-se</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="search" class="nav-link" href="#"><i class="fas fa-search"></i>Pesquisar</a>
-                    </li>
-                    <li id="nav-dropdown" class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
-                                class="fas fa-user"></i></a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="https://github.com/GiovannaRossi" target="blank"><img
-                                    src="icon 1.jpeg">Giovana Rossi</a>
-                            <a class="dropdown-item" href="https://github.com/Henrique-Git" target="blank"><img
-                                    src="icon 2.jpeg">Henrique Medeiros</a>
-                            <a class="dropdown-item" href="https://github.com/jovimoura" target="blank"><img
-                                    src="icon 3.jpeg">João Victor Moura</a>
-                            <a class="dropdown-item" href="https://github.com/laoliveir" target="blank"><img
-                                    src="icon 4.jpeg">Larissa Oliveira</a>
-                            <a class="dropdown-item" href="https://github.com/WellHarper" target="blank"><img
-                                    src="icon 5.jpeg">Wellerson Ramos</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"><i class="fas fa-plus"></i>Adicionar perfil</a>
-                        </div>
+                        <a class="nav-link" href="signup.html"><i class="fas fa-user-check"></i>Cadastre-se</a>
                     </li>
                 </ul>
             </div>
@@ -70,80 +56,110 @@
 
     <main>
         <section class="home_main">
-            <div class="top_home_main" style="height: 600px; width: 98.5vw;" >
+            <div class="top_home_main">
                 <div class="divMarketing">
                     <p class="marketing">DIVIRTA-SE COM OS MELHORES FILMES E SÉRIES REUNIDOS EM UM SÓ LUGAR</p>
                 </div>
-                <button  class="btn btn-primary" id="cadastrar_home">CADASTRAR</button> 
+                <button  class="btn btn-primary" id="cadastrar_home">
+                    <a href="signup.html">CADASTRE-SE</a>
+                </button>
             </div>
 
             <div>
-                <p class="marketing" id="marketing2">ASSISTA QUANDO QUISER E DE ONDE QUISER</p>
+                <p class="marketing" id="marketing2">ASSISTA QUANDO QUISER E COMO QUISER</p>
             </div>
 
             <ul class="icons">
-                <li class="watch"><i class="fas fa-mobile-alt"></i></li>
-                <li class="watch"><i class="fas fa-tv"></i></li>
-                <li class="watch"><i class="fas fa-laptop"></i></li>
+                <li class="watch"><i class="fas fa-mobile-alt"></i>Celular</li>
+                <li class="watch"><i class="fas fa-tv"></i>TV</li>
+                <li class="watch"><i class="fas fa-laptop"></i>Computador</li>
             </ul>
 
             <div class="mid_home_main">
                 <div>
-                    <p class="marketing" id="marketing2">APROVEITE TÍTULOS FAMOSOS DO CINEMA</p>
+                    <p class="marketing" id="marketing2">TÍTULOS FAMOSOS DO CINEMA NO CONFORTO DA SUA CASA</p>
                 </div>
 
-                <div class="div_container">
-                    <img class="img_mid" src="./images/us-jordan-peele.jpg" alt="">
+                <div class="us_container">
+                    <div id="img_mid">
+                        <div id="box-btn">
+                            <button id="play-btn">Play</button>
+                            <button id="add-btn">+</button>
+                        </div>
+                    </div>
 
-                    <p></p>
+                    <div class="right_text">
+                        <p class="marketing" id="marketing3">ASSISTA NA HORA OU ADICIONE AOS SEUS FAVORITOS PARA ASSISTIR A QUALQUER HORA</p>
+                    </div>
                 </div>
                 
+                <div>
+                    <p class="marketing" id="prices">PREÇOS TOTALMENTE ACESSÍVEIS</p>
+                </div>
+
+                <div class="prices_container">
+                    <div class="left_text">
+                        <p class="marketing" id="marketing4">QUER AJUDAR OS DESENVOLVEDORES ?!!</p>
+
+                        <p class="marketing" id="marketing4">Contrate os serviços do <strong>G3+</strong> por apenas <strong>R$ 5500,00</strong></p>
+
+                        <span class="marketing" id="or">OU</span>
+
+                        <p class="marketing" id="marketing4">Divida em <strong>12x</strong> suaves parcelas de <strong>R$ 499,90</strong></p>
+                    </div>
+                    
+                    <div id="img_mid2">
+                    </div>
+                </div>
             </div>
             
             <div class="bottom_home_main">
+                <div>
+                    <p class="marketing" id="faq">PERGUNTAS FREQUENTES</p>
+                </div>
+
                 <div class="dropdown">
                     <ul class="dropdown_list">
                         <li class="dropdown_list_item">
                             <button class="button_collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                            Ajuda
+                            O QUE É O G3+ ?
                             </button>
-
                             <div class="collapse" id="collapseExample">
                                 <div class="card card-body">
-                                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                O G3+ é uma plataforma de streaming de filmes e séries no qual estão concentrados os principais títulos da cultura pop. 
                                 </div>
                             </div>
                         </li>
 
                         <li class="dropdown_list_item">
                             <button class="button_collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
-                            Jesus
+                            COMO POSSO ASSINAR O G3+ ?
                             </button>
                             <div class="collapse" id="collapseExample2">
                                 <div class="card card-body">
-                                G-L-O-R-I-A
+                                O G3+ pode ser assinado de qualquer dispositivo. Basta fazer o cadastro no site e escolher a forma de pagamento ideal para disfrutar de todo o conteúdo disponível na plataforma.
                                 </div>
                             </div>
                         </li>
 
                         <li class="dropdown_list_item">
                             <button class="button_collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
-                            Por favor
+                            O QUE EU POSSO ASSISTIR NO G3+ ? 
                             </button>
                             <div class="collapse" id="collapseExample3">
                                 <div class="card card-body">
-                                Agradeço, Gratidão Sempre
+                                A plataforma G3+ conta com um extenso catálogo de filmes e séries, das mais variadas categorias, constantemente atualizados pelos serviços da OMDB. 
                                 </div>
                             </div>
                         </li>
 
                         <li class="dropdown_list_item">
                             <button class="button_collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
-                            Te peço
+                            QUEM SÃO AS MENTES POR TRÁS DO G3+ ?
                             </button>
                             <div class="collapse" id="collapseExample4">
                                 <div class="card card-body">
-                                Obrigado
+                                A idéia da plataforma do G3+ foi desenvolvida por uma equipe de desenvolvedores fullstack em ascenção. A equipe era composta por Giovanna Rossi, Henrique Medeiros, João Victor Moura, Larissa Oliveira e Wellerson Ramos.
                                 </div>
                             </div>
                         </li>
@@ -153,7 +169,7 @@
         </section>
     </main>
 
-    <footer class="rodape">
+    <footer class="footer">
         <p>
             Todos os direitos reservados &copy; 2021<br>
             Grupo 3 | T8 <a href="https://www.resilia.work/" target="blank">Resilia</a>

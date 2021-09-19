@@ -1,0 +1,409 @@
+html{
+    height: 100%;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+    grid-template-columns: auto;
+    grid-template-rows: 100px auto 40px;
+    height: 100%;
+    font-family: 'Play', sans-serif;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(27,12,55,1) 100%);
+    background-attachment: fixed;
+}
+
+header{
+    grid-area: header;
+    background: rgb(0,0,0);
+    margin-bottom: 3rem; 
+}
+
+.navbar{
+    padding: 0 0 0 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.mr-auto{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand{
+    font-size: 4rem;
+    margin: 0 4rem 0 0;
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    margin: 0 0 0 10rem;
+}
+
+.nav-item{
+    width: 25%;
+    list-style: none;
+}
+
+i{
+    color: white;
+}
+
+.nav-item:hover{
+    color: #dcdcdc;
+}
+
+main{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top_home_main{
+    height: 600px; 
+    width: 98.7vw;
+    background-image: url("./images/summer-movies-2021-new-e1620919489437.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5em solid rgba(114, 113, 113, 0.912);
+}
+
+.divMarketing{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 0.6em groove transparent;
+    border-radius: 1em;
+    color: #dcdcdc;
+    -webkit-backdrop-filter: blur(1.5em);
+    backdrop-filter: blur(1.5em);
+}
+
+#cadastrar_home{
+    height: 9%;
+    width: 20%;
+    border-radius: 1.5rem;
+    background-color: #5b038a;
+    border-color: #560382;    
+    margin-top: 5%;
+    font-weight: bolder;
+}
+
+#cadastrar_home > a{
+    color: #dcdcdc;
+    text-decoration: none;
+}
+
+#cadastrar_home:hover{
+    background-color:#440069;
+}
+
+.marketing{
+    font-family: 'Play', sans-serif;
+    font-size: 2em;
+    font-weight: bolder;
+    text-align: center;
+    color: #dcdcdc;
+}
+
+#marketing2{
+    line-height: 5em;
+    font-size: 1.5em;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 0.5em solid rgba(114, 113, 113, 0.912); 
+}
+
+.icons li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20%;
+    background-color: #dcdcdc;
+    margin-bottom: 3.5em;
+    padding-bottom: 1em;
+}
+
+.watch i{
+    padding: 0.6em 1.5em;
+    color: black;
+    font-size: 2em;
+}
+
+.watch:hover{
+    background-color: white;
+}
+
+.mid_home_main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#img_mid{
+    background-image: url("./images/us-jordan-peele.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 3em;
+    height: 24.5em;
+    width: 50vw;
+    filter: grayscale(50%);
+}
+
+.us_container{
+    width: 98.7vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    border-bottom: 0.5em solid rgba(114, 113, 113, 0.912);
+    padding-bottom: 3em;
+}
+
+#box-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20em;
+}
+
+#play-btn{
+    background: #dcdcdc;
+    color: #000;
+    font-size: 2rem;
+    font-family: 'Play', sans-serif;
+    padding: .1rem 1rem .1rem 1rem;
+    transition:all .32s ease-in-out;
+    border: 2px groove #dcdcdc;
+    border-radius: 10px;
+    margin: .4rem;
+    cursor: default;
+}
+
+#play-btn:hover{
+    background-color: white;
+}
+
+#add-btn {
+    background: #dcdcdc;
+    color: #000;
+    font-size: 2rem;
+    font-family: 'Play', sans-serif;
+    padding: .1rem 1rem .1rem 1rem;
+    transition:all .32s ease-in-out;
+    border: 2px solid #dcdcdc;
+    border-radius: 100%;
+    margin: .4rem;
+    cursor: default;
+}
+
+#add-btn:hover{
+    background-color: white;
+}
+
+.right_text{
+    width: 50%;
+}
+
+#marketing3{
+    font-size: 1.5em;
+}
+
+#prices{
+    line-height: 5em;
+    font-size: 1.5em;
+}
+
+.prices_container{
+    width: 98.7vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    border-bottom: 0.5em solid rgba(114, 113, 113, 0.912);
+    padding-bottom: 3em;
+}
+
+#img_mid2{
+    background-image: url("./images/legiao_uFDQCqN8bHMGzkhP_Tdw5lx2U7rvaZmgfe64ipct1W.jpg.jpeg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 3em 0;
+    height: 24.5em;
+    width: 50vw;
+    filter: grayscale(30%);
+}
+
+.left_text{
+    width: 60%;
+    line-height: 3.5em;
+}
+
+#marketing4{
+    font-size: 1.5em;
+}
+
+#or::before{
+    content: '----- ';
+    height: 5px;
+    width: 100px;
+}
+
+#or{
+    font-size: 1.5em;
+}
+
+#or::after{
+    content: ' -----';
+    height: 5px;
+    width: 100%;
+}
+
+strong{
+    font-size: 1.5em;
+}
+
+#faq{
+    line-height: 5em;
+    font-size: 1.5em;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown_list{
+    width: 80%;
+}
+
+.dropdown_list_item{
+    list-style-type: none;
+}
+
+.button_collapse{
+    width: 96%;
+    font-size: 1.2em;
+    padding: 0.8em;
+    background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));
+    color: #dcdcdc;
+    text-align: left;
+}
+
+.card-body{
+    width: 95.9%;
+    background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));
+    font-size: 1.2em;
+    text-align: justify;
+    color: #dcdcdc;
+    border-radius: 0.5em;
+    line-height: 2em;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    border-radius: 0.5em;
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #dcdcdc3e;
+}
+
+footer a{
+    color: inherit;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: rgba(255,241,78,1);
+    transition: .5s;
+}
+
+@media (max-width: 760px){
+    body{
+        grid-template-rows: auto auto 40px;
+    }
+
+    .navbar-nav{
+        margin: 0 0 0 1rem;
+    }
+
+    .nav-item{
+        width: 80%;
+    }
+
+    .top_home_main{
+        width: 100%;
+    }
+
+    #cadastrar_home{
+        height: 9%;
+        width: 40%;
+    }
+
+    #marketing2{
+        line-height: 2em;
+    }
+
+    ol, ul {
+        padding: 0;
+    }
+
+    .icons{
+        margin-top: 1em;
+    }
+
+    .watch i{
+        padding: 0.5em 1em;
+        color: black;
+        font-size: 2em;
+    }
+
+    #marketing3 {
+        line-height: 2em;
+        font-size: 1.2em;
+    }
+
+    .us_container{
+        margin-top: 3em;
+    }
+
+    #prices{
+        line-height: 2em;
+    }
+
+    .prices_container{
+        margin-top: 3em;
+    }
+
+    #marketing4 {
+        font-size: 1.2em;
+    }
+}
