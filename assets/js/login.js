@@ -4,6 +4,22 @@ let inputPassword = document.getElementById('inputPassword')
 let btnResetPassword = document.getElementById('btnResetPassword')
 let changePassword = document.getElementById('changePassword')
 let btnPassword = document.getElementById('btnPassword')
+let btnPass = document.querySelector('.btn-primary');
+
+function trocaPagina(pagina){
+    
+    window.location.href = '../home/home.html';
+}
+
+btnPass.onclick = (event)=>{
+    event.preventDefault();
+    console.log('botao')
+    if(inputEmail.value!=''&&inputPassword.value!=''){
+        trocaPagina('./forgot-password.html')
+    }else {
+        alert('Usuário ou senha inválidos!')
+    }
+}
 
 inputEmail.addEventListener('blur', function () {
     let re = /\S+@\S+\.\S+/

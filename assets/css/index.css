@@ -70,7 +70,7 @@ main{
 .top_home_main{
     height: 600px; 
     width: 98.7vw;
-    background-image: url("./images/summer-movies-2021-new-e1620919489437.jpg");
+    background-image: url("../../signup/images/summer-movies-2021-new-e1620919489437.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -167,7 +167,7 @@ p{
 }
 
 #img_mid{
-    background-image: url("./images/us-jordan-peele.jpg");
+    background-image: url("../../signup/images/us-jordan-peele.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 0 3em;
@@ -250,7 +250,7 @@ p{
 }
 
 #img_mid2{
-    background-image: url("./images/legiao_uFDQCqN8bHMGzkhP_Tdw5lx2U7rvaZmgfe64ipct1W.jpg.jpeg");
+    background-image: url("../../signup/images/legiao_uFDQCqN8bHMGzkhP_Tdw5lx2U7rvaZmgfe64ipct1W.jpg.jpeg");
     background-size: cover;
     background-position: center;
     border-radius: 3em 0;
