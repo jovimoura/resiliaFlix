@@ -94,6 +94,8 @@ main{
 }
 
 .top_home_main{
+    height: 600px; 
+    width: 98.7vw;
     background-image: url("./images/summer-movies-2021-new-e1620919489437.jpg");
     background-position: center;
     background-size: cover;
@@ -114,9 +116,19 @@ main{
     align-items: center;
     border: 0.6em groove transparent;
     border-radius: 1em;
-    color: white;
+    color: #dcdcdc;
     -webkit-backdrop-filter: blur(1.5em);
     backdrop-filter: blur(1.5em);
+}
+
+#cadastrar_home{
+    height: 9%;
+    width: 20%;
+    border-radius: 1.5rem;
+    background-color: #5b038a;
+}
+#cadastrar_home > a{
+    color: #dcdcdc;
 }
 
 .marketing{
@@ -124,10 +136,11 @@ main{
     font-size: 2em;
     font-weight: bolder;
     text-align: center;
+    color: #dcdcdc;
 }
 
 #marketing2{
-    line-height: 4em;
+    line-height: 5em;
     font-size: 1.5em;
 }
 
@@ -143,14 +156,19 @@ p{
 }
 
 .icons li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: 2px solid black;
-    border-radius: 3em;
-    background-color: white;
+    border-radius: 20%;
+    background-color: #dcdcdc;
     margin-bottom: 3.5em;
+    padding-bottom: 1em;
 }
 
 .watch i{
-    padding: 1.5em;
+    padding: 0.6em 1.5em;
     color: black;
     font-size: 2em;
 }
@@ -161,28 +179,129 @@ p{
     justify-content: flex-start;
 }
 
-.img_mid{
-    border-radius: 0 2em;
-    height: 50%;
-    width: 50%;
+#img_mid{
+    background-image: url("./images/us-jordan-peele.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 3em;
+    height: 24.5em;
+    width: 50vw;
+    filter: grayscale(50%);
 }
 
-#cadastrar_home{
-    height: 9%;
-    width: 20%;
-    border-radius: 1.5rem;
-    background-color: #5b038a;
+.us_container{
+    width: 98.7vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    border-bottom: 0.5em solid rgba(114, 113, 113, 0.912);
+    padding-bottom: 3em;
+}
+
+#box-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20em;
+}
+
+#play-btn{
+    background: #dcdcdc;
+    color: #000;
+    font-size: 2rem;
+    font-family: 'Play', sans-serif;
+    padding: .1rem 1rem .1rem 1rem;
+    transition:all .32s ease-in-out;
+    border: 2px groove #dcdcdc;
+    border-radius: 10px;
+    margin: .4rem;
+}
+
+#add-btn {
+    background: #dcdcdc;
+    color: #000;
+    font-size: 2rem;
+    font-family: 'Play', sans-serif;
+    padding: .1rem 1rem .1rem 1rem;
+    transition:all .32s ease-in-out;
+    border: 2px solid #dcdcdc;
+    border-radius: 100%;
+    margin: .4rem;
+}
+
+.right_text{
+    width: 50vw;
+}
+
+#marketing3{
+    font-size: 1.5em;
+}
+
+#prices{
+    line-height: 5em;
+    font-size: 1.5em;
+}
+
+.prices_container{
+    width: 98.7vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    border-bottom: 0.5em solid rgba(114, 113, 113, 0.912);
+    padding-bottom: 3em;
+}
+
+#img_mid2{
+    background-image: url("./images/legiao_uFDQCqN8bHMGzkhP_Tdw5lx2U7rvaZmgfe64ipct1W.jpg.jpeg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 3em 0;
+    height: 24.5em;
+    width: 50vw;
+    filter: grayscale(30%);
+}
+
+.left_text{
+    width: 60%;
+    line-height: 3.5em;
+}
+
+#marketing4{
+    font-size: 1.5em;
+}
+
+#or::before{
+    content: '----- ';
+    height: 5px;
+    width: 100px;
+}
+
+#or{
+    font-size: 1.5em;
+}
+
+#or::after{
+    content: ' -----';
+    height: 5px;
+    width: 100%;
+}
+
+strong{
+    font-size: 1.5em;
+}
+
+#faq{
+    line-height: 5em;
+    font-size: 1.5em;
 }
 
 .dropdown{
     display: flex;
     justify-content: center;
-    margin: 2em;
 }
 
 .dropdown_list{
-    border: 5px solid black;
-    border-radius: 20px;
     width: 80%;
 }
 
@@ -192,13 +311,25 @@ p{
 
 .button_collapse{
     width: 96%;
-    padding: 0.5em;
+    font-size: 1.2em;
+    padding: 0.8em;
     background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));
-    color: white;
+    color: #dcdcdc;
+    text-align: left;
 }
 
 .card-body{
     width: 95.9%;
+    background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));
+    font-size: 1.2em;
+    text-align: justify;
+    color: #dcdcdc;
+    border-radius: 0.5em;
+    line-height: 2em;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    border-radius: 0.5em;
 }
 
 h2{
@@ -229,7 +360,6 @@ h2{
     width: 40%;
     margin: 2.5rem 0 2.5rem 0;
     color: #dcdcdc;
-
 }
 
 .form{
@@ -387,7 +517,19 @@ footer a:hover{
 }
 
 @media (max-width: 760px){
-    .container{
+    body{
+        grid-template-rows: auto auto 40px;
+    }
+
+    .navbar-nav{
+        margin: 0 0 0 1rem;
+    }
+
+    .nav-item{
+        width: 80%;
+    }
+
+    .container_signup{
         width: 80%;
     }
 }
