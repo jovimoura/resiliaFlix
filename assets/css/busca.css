@@ -1,3 +1,9 @@
+html {
+    height: 100%;
+}
+
+
+
 body {
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(27,12,55,1) 100%);
@@ -6,7 +12,17 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; */
-    height: 100vh;
+    height: 100%;
+    background-attachment: fixed;
+    font-family: 'Play', sans-serif;
+
+    display: grid;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+    grid-template-rows  : 50px auto 40px;
+    grid-template-columns: auto;
 }
 
 header{
@@ -78,6 +94,11 @@ header{
 
 .fas{
     margin-right: 7%;
+}
+
+main {
+    grid-area: main;
+    height: calc(100vh - 90px);
 }
 
 #searched {
@@ -168,6 +189,7 @@ footer a:hover{
 @media (max-width:760px) {
     body {
         background-attachment: fixed;
+        grid-template-rows: auto auto 40px;
     }
 
     .navbar-nav {

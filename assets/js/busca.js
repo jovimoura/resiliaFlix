@@ -87,7 +87,7 @@ function pegaFilmes(Param) {
 
 
           contentItem.addEventListener('click', () => {
-            window.location.href = "../Informacoes/informacoes.html?q=" + titulo + "&y=" + year
+            window.location.href = "../informacoes/informacoes.html?q=" + titulo + "&y=" + year
           })
 
 

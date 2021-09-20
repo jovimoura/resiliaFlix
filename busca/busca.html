@@ -8,6 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&family=Roboto:wght@900&display=swap"
+        rel="stylesheet">
     <script src="../assets/js/busca.js" defer></script>
     <link rel="stylesheet" href="../assets/css/busca.css">
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&family=Roboto:wght@900&display=swap"
@@ -28,7 +32,7 @@
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a3e340081b.js" crossorigin="anonymous"></script>
-
+    <script src="../assets/js/busca.js"></script>
     <title>G3+ | Pesquisar</title>
 </head>
 <body id="box" class="">
@@ -54,15 +58,15 @@
                                 class="fas fa-user"></i></a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="https://github.com/GiovannaRossi" target="blank"><img
-                                    src="icon 1.jpeg">Giovana Rossi</a>
+                                    src="../assets/img/perfil/icon_1.png">Giovana Rossi</a>
                             <a class="dropdown-item" href="https://github.com/Henrique-Git" target="blank"><img
-                                    src="icon 2.jpeg">Henrique Medeiros</a>
+                                    src="../assets/img/perfil/icon_2.png">Henrique Medeiros</a>
                             <a class="dropdown-item" href="https://github.com/jovimoura" target="blank"><img
-                                    src="icon 3.jpeg">João Victor Moura</a>
+                                    src="../assets/img/perfil/icon_3.png">João Victor Moura</a>
                             <a class="dropdown-item" href="https://github.com/laoliveir" target="blank"><img
-                                    src="icon 4.jpeg">Larissa Oliveira</a>
+                                    src="../assets/img/perfil/icon_4.png">Larissa Oliveira</a>
                             <a class="dropdown-item" href="https://github.com/WellHarper" target="blank"><img
-                                    src="icon 5.jpeg">Wellerson Ramos</a>
+                                    src="../assets/img/perfil/icon_5.png">Wellerson Ramos</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#"><i class="fas fa-plus"></i>Adicionar perfil</a>
                         </div>
@@ -71,9 +75,10 @@
             </div>
         </nav>
     </header>
-    <input placeholder="Digite o nome do filme..." style="font-family: 'Play', sans-serif;" class="form-control" id="sendMovie" type="text">
-
+    
     <main id="contentArea" class="container">
+        <input placeholder="Digite o nome do filme..." style="font-family: 'Play', sans-serif;" class="form-control" id="sendMovie" type="text">
+
         <div id="content">
             <h3 id="error">Explorar</h3>
         </div>
