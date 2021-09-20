@@ -147,23 +147,23 @@ header{
 }
 
 .categoryItem:nth-child(1):hover {
-    background: url('./background-win.gif') center / cover;
+    background: url('../img/home/acao') center / cover;
 }
 
 .categoryItem:nth-child(2):hover {
-    background: url('./romance.gif') center / cover;
+    background: url('../img/home/romance.gif') center / cover;
 }
 
 .categoryItem:nth-child(3):hover {
-    background: url('./terror.gif') center / cover;
+    background: url('../img/home/terror.gif') center / cover;
 }
 
 .categoryItem:nth-child(4):hover {
-    background: url('./drama.webp') center / cover;
+    background: url('../img/home/drama.webp') center / cover;
 }
 
 .categoryItem:nth-child(5):hover {
-    background: url('./laCasaDePapel.gif') center / cover;
+    background: url('../img/home/serie.gif') center / cover;
 }
 
 .thumbSection {
