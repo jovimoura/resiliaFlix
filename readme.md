@@ -72,6 +72,7 @@ A ferramenta de busca e a de informações foram desenvolvidas por <a href="http
 <ul>
     <li><a href="https://www.linkedin.com/in/henrique-neves-medeiros-19320a184/">LinkedIn</a></li>
     <li><a href="https://github.com/Henrique-Git">Github</a></li>
+    <li>Email: henrique.nemed@gmail.com</li>
 </ul>
 
 ### João Victor Moura😎
@@ -85,6 +86,7 @@ A ferramenta de busca e a de informações foram desenvolvidas por <a href="http
 <ul>
     <li><a href="https://www.linkedin.com/in/laoliveir/">LinkedIn</a></li>
     <li><a href="https://github.com/laoliveir">Github</a></li>
+    <li>Email: laoliveir97@gmail.com</li>
 </ul>
 
 ### Wellerson da Silva😃
