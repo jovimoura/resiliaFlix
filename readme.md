@@ -25,6 +25,10 @@ O projeto foi divido em duas partes, sendo uma delas a parte de login/cadastre-s
 A página de home foi desenvolvida por <a href="https://github.com/GiovannaRossi">Giovanna Rossi</a>, <a href="https://github.com/jovimoura">João Victor Moura</a> e <a href="https://github.com/WellHarper">Wellerson Silva</a>. A tela de home foi divida em três partes, sendo elas a tela de home, onde encontramos cabeçalho, carrosséis, rodapés, barra de pesquisa, login, perfis e etc.
 <p> A parte de perfis foi desenvolvida por <a href="https://github.com/GiovannaRossi">Giovanna Rossi</a> e foi integrada ao cabeçalho.</p>
 
+## Imagem telas de pefil💻📱
+<img src="./assets/img/readme/perfil.png">
+<img src="./assets/img/readme/perfilresponsivo.png">
+
 ### Home💻
 
 A página de home, foi desenvolvida por <a href="https://github.com/jovimoura">João Victor Moura</a>. Nela foram utilizadas, além de HTML, CSS e Java Script, bibliotecas, sendo elas: Bootstrap (utilizada no banner principal) e SwiperJS (utilizada nos carrosséis).
