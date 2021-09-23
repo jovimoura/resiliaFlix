@@ -93,4 +93,5 @@ A ferramenta de busca e a de informações foram desenvolvidas por <a href="http
 <ul>
     <li><a href="https://www.linkedin.com/in/wellharper/">LinkedIn</a></li>
     <li><a href="https://github.com/WellHarper">Github</a></li>
+    <li>Email: wellersonramos360@gmail.com</li>
 </ul>
